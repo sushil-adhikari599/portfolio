@@ -1,0 +1,53 @@
+body {
+    background-color: lightgrey;
+}
+.main-div {
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    background-color: white;
+
+}
+.a-div {
+    display: flex;
+    justify-content: space-between;
+}
+.b-div {
+    display: flex;
+    justify-content: space-between;
+}
+.c-div {
+    display: flex;
+    justify-content: space-between;
+}
+.d-div {
+    display: flex;
+    justify-content: space-between;
+}
+#a-text-1,#b-text-1,#c-text-1,#d-text-1
+{
+
+    font-family: Inter;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    background-color:#FFB400;
+    color:#2B2B2B;
+
+}
+#a-text-2,#b-text-2,#c-text-2,#d-text-2
+{
+
+    font-family: Inter;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #2B2B2B;
+;
+
+}
+#c-text-2 {
+    color:#7EB942;
+
+}
