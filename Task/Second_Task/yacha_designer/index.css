@@ -300,19 +300,24 @@ body {
  }
  .sub-div-3-2 {
     display: flex;
-    padding-bottom: 20px;
-    padding-left: 40px;
+    padding: 10px 0px 20px 40px;
+    
+ }
     
  .sub-div-3-3 {
     display: flex;
     flex-direction: column;
     gap:5px;
+    padding-top: 20px;
     padding-left: 40px;
-    justify-content: center;
+    justify-items: center;
  }
  .sub-div-3-3-1 {
     display: flex;
     gap:1px;
+    width: 312px;
+    height: 48px;
+    align-items: center;
  }
  .text-2 {
     font-family: Poppins;
@@ -463,4 +468,29 @@ body {
     text-align: left;
     color: #00000066;
  }
- 
+ #text-15 {
+   font-family: Poppins;
+   font-size: 32px;
+   font-weight: 500;
+   line-height: 48px;
+   text-align: left;
+   color: rgba(0, 0, 0, 0.2);
+
+ }
+ #text-16 {
+   font-family: Poppins;
+   font-size: 32px;
+   font-weight: 500;
+   line-height: 48px;
+   text-align: left;
+
+ }
+ #text-17 {
+   font-family: 'Poppins';
+   font-style: normal;
+   font-weight: 300;
+   font-size: 14px;
+   line-height: 21px;
+   color: rgba(0, 0, 0, 0.6);
+
+ }
