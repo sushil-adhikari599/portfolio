@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sushil Adhikari</title>
+    <style>
+      * {
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+      }
+    </style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              mainColor: "#E5E5E5",
+              borderColor: "#F0F0F6",
+              fontColor1: "#2B2B2B",
+              fontColor2: "#767676",
+            },
+            fontFamily: {
+              inter: "Inter",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    
+    class="flex flex-row bg-mainColor"
+  >
+    <section
+      class="flex flex-col bg-white w-[305px] h-[1315px] pt-[50px] pr-[45px] pb-[25px] pl-[40px] gap-[25px]"
+      id="leftMenu"
+    >
+      <div
+        class="flex flex-col items-center justify-between  pb-[25px] relative  border-b border-1.5px border-borderColor border-solid w-[219px] h-[281px] "
+        id="profile"
+      >
+        <img class="w-[150px] h-[150px]" src="images/Profile.jpg" />
+        <img
+          class="w-[16px] h-[16px] absolute top-[141px] left-[160px]"
+          src="images/Available.png"
+        />
+        <h4
+          class="mt-[16px] font-inter font-[500] text-[18px] text-fontColor1 normal bg-mainColor"
+        >
+          Sushil Adhikari
+        </h4>
+        <p class="font-inter font-[400] text-[15px] text-fontColor2 normal">
+          Front End Developer
+        </p>
+        <div class="flex flex-row gap-[15px]" id="socialMediaIcons">
+          <img src="images/Facebook.png" />
+          <img src="images/Instagram.png" />
+          <img src="images/Twitter.png" />
+          <img src="images/Linkeding.png" />
+          <img src="images/Youtube.png" />
+          <img src="images/Dribbble.png" />
+        </div>
+      </div>
+      <div  class="flex flex-col justify-between  w-[220px] h-[126px]"id="about">
+        <div class="flex flex-row justify-between font-inter font-[400] text-[15px] text-fontColor1 normal">
+          <p class="bg-[#FFB400]">Age:</p>
+          <p>24</p>
+        </div>
+        <div class="flex flex-row justify-between font-inter font-[400] text-[15px] text-fontColor1 normal">
+          <p class="bg-[#FFB400]">Residence:</p>
+          <p>BD</p>
+        </div>
+        <div class="flex flex-row justify-between font-inter font-[400] text-[15px] normal">
+          <p class="bg-[#FFB400] text-fontColor1">Freelance:</p>
+          <p class="text-[#7EB942]">Available</p>
+        </div>
+        <div class="flex flex-row justify-between font-inter font-[400] text-[15px] text-fontColor1 normal">
+          <p class="bg-[#FFB400]">Address:</p>
+          <p>Dhaka,Bangladesh</p>
+        </div>
+      </div>
+      <div id="languages"></div>
+      <div id="skills"></div>
+      <div id="extraSkills"></div>
+      <div id="button/cv2">
+        <button id="cv2"></button>
+      </div>
+    </section>
+    <section id="mainMenu"></section>
+    <section id="rightMenu"></section>
+  </body>
+</html>
