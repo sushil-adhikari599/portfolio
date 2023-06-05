@@ -1,0 +1,1488 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sushil Adhikari</title>
+    <!-- Resetting all element in html -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+    </style>
+    <!-- embedded code for fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Applying tailwind via cdn and customizing user own color and font -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              mainColor: "#E5E5E5",
+              borderColor: "#F0F0F6",
+              fontColor1: "#2B2B2B",
+              fontColor2: "#767676",
+              yColor: "#FFB400",
+            },
+            fontFamily: {
+              inter: "Inter",
+              roboto: "Roboto",
+            },
+          },
+          screens: {
+            //  Add your custom breakpoint here
+            custom: "900px",
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="flex bg-mainColor">
+    <!-- Left Menu Code -->
+    <section
+      id="leftMenu"
+      class="flex flex-col justify-between bg-white w-[305px] h-full p-[1%] gap-[25px]  max-[767px]:hidden  "
+    >
+      <!--Profile  -->
+      <div
+        id="profile"
+        class=" flex flex-col items-center gap-[15px] pb-[25px]  border-b border-1.5px border-borderColor border-solid "
+      >
+      <div class="relative">
+        <img class="  w-[150px] h-[150px] " src="/images/Profile.jpg" />
+        <img class="w-[16px] h-[16px] absolute bottom-[7%] right-[7%] " src="/images/Available.png"/>
+      </div>
+        
+        <h4 class="mt-[16px] font-inter font-[500] text-[18px] text-fontColor1">
+          Sushil Adhikari
+        </h4>
+        <p class="font-inter font-[400] text-[15px] text-fontColor2">
+          Front End Developer
+        </p>
+        <div class="flex gap-[10px] flex-wrap  " id="socialMediaIcons">
+          <img src="/images/Facebook.png" />
+          <img src="/images/Instagram.png" />
+          <img src="/images/Twitter.png" />
+          <img src="/images/Linkeding.png" />
+          <img src="/images/Youtube.png" />
+          <img src="/images/Dribbble.png" />
+        </div>
+      </div>
+      <!-- About -->
+      <div
+        id="about"
+        class="flex flex-col gap-[10px] pb-[25px] border-b border-1.5px border-borderColor border-solid"
+      >
+        <div
+          class="flex  flex-wrap justify-between font-inter font-[400] text-[15px] text-fontColor1"
+        >
+          <p class="bg-yColor">Age:</p>
+          <p>24</p>
+        </div>
+        <div
+          class="flex flex-wrap justify-between font-inter font-[400] text-[15px] text-fontColor1"
+        >
+          <p class="bg-yColor">Residence:</p>
+          <p>BD</p>
+        </div>
+        <div class="flex flex-wrap justify-between font-inter font-[400] text-[15px]">
+          <p class="bg-yColor text-fontColor1">Freelance:</p>
+          <p class="text-[#7EB942]">Available</p>
+        </div>
+        <div
+          class="flex flex-wrap justify-between font-inter font-[400] text-[15px] text-fontColor1"
+        >
+          <p class="bg-yColor">Address:</p>
+          <p>Dhaka,Bangladesh</p>
+        </div>
+      </div>
+      <!-- Languages -->
+      <div
+        id="languages"
+        class="flex flex-col gap-[10px] pb-[25px] border-b border-1.5px border-borderColor border-solid"
+      >
+        <h4 class="font-inter font-[500] text-[18px] text-fontColor1 mb-[5px]">
+          Languages
+        </h4>
+        <div class="flex flex-col">
+          <div
+            class="flex justify-between font-inter font-[400] text-[15px] text-fontColor2"
+          >
+            <p>Bangla</p>
+            <p>100%</p>
+          </div>
+          <div
+            class="w-full h-[6px] border border-solid border-[0.5px] border-yColor rounded-[5px]"
+          >
+            <div class="w-[99%] h-[2px] m-[1px] bg-yColor"></div>
+          </div>
+        </div>
+        <div class="flex flex-col">
+          <div
+            class="flex justify-between font-inter font-[400] text-[15px] text-fontColor2"
+          >
+            <p>English</p>
+            <p>80%</p>
+          </div>
+          <div
+            class="w-full h-[6px] border border-solid border-[0.5px] border-yColor rounded-[5px]"
+          >
+            <div class="w-[79%] h-[2px] m-[1px] bg-yColor"></div>
+          </div>
+        </div>
+        <div class="flex flex-col">
+          <div
+            class="flex justify-between font-inter font-[400] text-[15px] text-fontColor2"
+          >
+            <p>Spanish</p>
+            <p>60%</p>
+          </div>
+          <div
+            class="w-full h-[6px] border border-solid border-[0.5px] border-yColor rounded-[5px]"
+          >
+            <div class="w-[79%] h-[2px] m-[1px] bg-yColor"></div>
+          </div>
+        </div>
+      </div>
+      <!-- Skills -->
+      <div
+        id="skills "
+        class="flex flex-col gap-[10px] pb-[25px] border-b border-1.5px border-borderColor border-solid"
+      >
+        <h4 class="font-inter font-[500] text-[18px] text-fontColor1 mb-[5px]">
+          Skills
+        </h4>
+
+        <div class="flex flex-col">
+          <div
+            class="flex justify-between font-inter font-[400] text-[15px] text-fontColor2"
+          >
+            <p>Html</p>
+            <p>90%</p>
+          </div>
+          <div
+            class="w-full h-[6px] border border-solid border-[0.5px] border-yColor rounded-[5px]"
+          >
+            <div class="w-[89%] h-[2px] m-[1px] bg-yColor"></div>
+          </div>
+        </div>
+        <div class="flex flex-col">
+          <div
+            class="flex justify-between font-inter font-[400] text-[15px] text-fontColor2"
+          >
+            <p>Css</p>
+            <p>85%</p>
+          </div>
+          <div
+            class="w-full h-[6px] border border-solid border-[0.5px] border-yColor rounded-[5px]"
+          >
+            <div class="w-[84%] h-[2px] m-[1px] bg-yColor"></div>
+          </div>
+        </div>
+        <div class="flex flex-col">
+          <div
+            class="flex justify-between font-inter font-[400] text-[15px] text-fontColor2"
+          >
+            <p>Js</p>
+            <p>80%</p>
+          </div>
+          <div
+            class="w-full h-[6px] border border-solid border-[0.5px] border-yColor rounded-[5px]"
+          >
+            <div class="w-[79%] h-[2px] m-[1px] bg-yColor"></div>
+          </div>
+        </div>
+        <div class="flex flex-col">
+          <div
+            class="flex justify-between font-inter font-[400] text-[15px] text-fontColor2"
+          >
+            <p>PHP</p>
+            <p>75%</p>
+          </div>
+          <div
+            class="w-full h-[6px] border border-solid border-[0.5px] border-yColor rounded-[5px]"
+          >
+            <div class="w-[74%] h-[2px] m-[1px] bg-yColor"></div>
+          </div>
+        </div>
+        <div class="flex flex-col">
+          <div
+            class="flex justify-between font-inter font-[400] text-[15px] text-fontColor2"
+          >
+            <p>WordPress</p>
+            <p>85%</p>
+          </div>
+          <div
+            class="w-full h-[6px] border border-solid border-[0.5px] border-yColor rounded-[5px]"
+          >
+            <div class="w-[84%] h-[2px] m-[1px] bg-yColor"></div>
+          </div>
+        </div>
+      </div>
+      <!-- Extra Skills -->
+      <div
+        id="extraSkills"
+        class="flex flex-col gap-[5px] pb-[25px] border-b border-1.5px border-borderColor border-solid"
+      >
+        <h4 class="font-inter font-[500] text-[18px] text-fontColor1 mb-[10px]">
+          Extra Skills
+        </h4>
+        <div class="flex gap-[15px]">
+          <img src="/images/Icons1.png" />
+          <p class="font-inter font-[400] text-[15px] text-fontColor2">
+            Bootstrap, Materialize
+          </p>
+        </div>
+        <div class="flex gap-[15px]">
+          <img src="/images/Icons1.png" />
+          <p class="font-inter font-[400] text-[15px] text-fontColor2">
+            Stylus, Saas, Less
+          </p>
+        </div>
+        <div class="flex gap-[15px]">
+          <img src="/images/Icons1.png" />
+          <p class="font-inter font-[400] text-[15px] text-fontColor2">
+            Gulp, Webpack, Grunt
+          </p>
+        </div>
+        <div class="flex gap-[15px]">
+          <img src="/images/Icons1.png" />
+          <p class="font-inter font-[400] text-[15px] text-fontColor2">
+            GIT Knowledge
+          </p>
+        </div>
+      </div>
+      <!-- Button -->
+      <button
+        id="button/cv2"
+        class="flex justify-center items-center gap-[8px] bg-yColor w-[98%] h-[40px] my-[4px]"
+      >
+        <p class="font-inter font-[600] text-[14px] text-fontColor1">
+          DOWNLOAD CV
+        </p>
+        <img src="/images/Vector1.png" />
+      </button>
+    </section>
+    <!-- Left Menu Code End -->
+    <!-- Middle Menu Code Start -->
+    <section
+      id="middleMenu"
+      class="flex flex-col overflow-auto w-full gap-[70px] px-[2%] py-[20px] mr-[80px] max-[767px]:mr-[60px]"
+    >
+      <!-- Main menu code -->
+      <div
+        id="mainMenu"
+        class="flex justify-between  px-[2%] py-[30px] bg-white max-[450px]:flex-wrap "
+      >
+        <div class="flex flex-col basis-2/3 gap-[18px] justify-center  max-[450px]:order-2 max-[450px]:grow">
+          <div
+            class="flex flex-col font-inter font-[700] text-[48px] max-[1390px]:text-[36px]"
+          >
+            <p class="text-fontColor1">I'm Sushil Adhikari</p>
+            <div class="flex gap-[5px] max-[1054px]:flex-wrap">
+              <p class="text-yColor">Front-end</p>
+              <p class="text-fontColor1">Developer</p>
+            </div>
+          </div>
+          <p
+            class="font-inter font-[400] text-[16px] text-fontColor2 max-w-[424px]"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et,
+            volutpat feugiat placerat lobortis. Natoque rutrum semper sed
+            suspendisse nunc lectus.
+          </p>
+          <button
+            id="button/hire"
+            class="flex justify-center items-center gap-[10px] bg-yColor w-[154px] h-[51px] mt-[7px]"
+          >
+            <p class="font-inter font-[600] text-[14px] text-fontColor1">
+              HIRE ME
+            </p>
+            <img src="/images/Vector8.png" />
+          </button>
+        </div>
+        <div class="flex items-center relative ">
+          <img class="w- h-auto basis-1/3" src="images/big-image.png" />
+          <img
+          class="absolute w-[16px]h-[16px] top-[1%] left-[2%]"
+          src="/images/ellipse1.png"
+        />
+        <img
+          class="absolute w-[16px]h-[16px] bottom-[1%] left-[8%]"
+          src="/images/ellipse2.png"
+        />
+        <img
+          class="absolute w-[16px]h-[16px] right-[2%] bottom-[2%]"
+          src="/images/ellipse3.png"
+        />
+        <img
+          class="absolute w-[16px]h-[16px] right-[30%] bottom-[30%]"
+          src="/images/ellipse4.png"
+        />
+        <img
+          class="absolute w-[16px]h-[16px] right-[3%] top-[6%]"
+          src="/images/ellipse5.png"
+        />
+        </div>
+        
+      </div>
+      <!-- My services code -->
+      <div id="myServices" class="flex flex-col gap-[25px]">
+        <div class="flex flex-col items-center">
+          <h2
+            class="font-inter font-[700] text-[32px] text-fontColor1 mb-[25px]"
+          >
+            My Services
+          </h2>
+          <p
+            class="font-inter font-[400] text-[15px] text-fontColor2 max-w-[438px] text-center mb-[30px]"
+          >
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+            sint. Velit officia consequat duis enim velit mollit. lorem ipsum
+          </p>
+        </div>
+        <div
+          class="grid grid-cols-3 gap-[20px] max-[1150px]:grid-cols-2 max-[865px]:grid-cols-1"
+        >
+          <div class="flex flex-col items-center gap-[15px] py-[35px] bg-white">
+            <img class="mb-[15px]" src="/images/coding.png" />
+            <h4
+              class="font-inter font-[500] text-[18px] text-fontColor1 text-center"
+            >
+              Web Development
+            </h4>
+            <p
+              class="font-inter font-[400] text-[15px] text-fontColor2 text-center"
+            >
+              Blog, E-commerce
+            </p>
+          </div>
+          <div class="flex flex-col items-center gap-[15px] py-[35px] bg-white">
+            <img class="mb-[15px]" src="/images/computer.png" />
+            <h4
+              class="font-inter font-[500] text-[18px] text-fontColor1 text-center"
+            >
+              UI/UX Design
+            </h4>
+            <p
+              class="font-inter font-[400] text-[15px] text-fontColor2 text-center"
+            >
+              Mobile App, Web Design
+            </p>
+          </div>
+          <div class="flex flex-col items-center gap-[15px] py-[30px] bg-white">
+            <img class="mb-[15px]" src="/images/Microphone.png" />
+            <h4
+              class="font-inter font-[500] text-[18px] text-fontColor1 text-center"
+            >
+              Sound Design
+            </h4>
+            <p
+              class="font-inter font-[400] text-[15px] text-fontColor2 text-center"
+            >
+              Voice Over, Beat Making
+            </p>
+          </div>
+          <div class="flex flex-col items-center gap-[15px] py-[35px] bg-white">
+            <img class="mb-[15px]" src="/images/game-development.png" />
+            <h4
+              class="font-inter font-[500] text-[18px] text-fontColor1 text-center"
+            >
+              Game Design
+            </h4>
+            <p
+              class="font-inter font-[400] text-[15px] text-fontColor2 text-center"
+            >
+              Character Design, Props & Object
+            </p>
+          </div>
+          <div class="flex flex-col items-center gap-[15px] py-[30px] bg-white">
+            <img class="mb-[15px]" src="/images/photograpy.png" />
+            <h4 class="font-inter font-[500] text-[18px] text-fontColor1">
+              Photograpy
+            </h4>
+            <p
+              class="font-inter font-[400] text-[15px] text-fontColor2 text-center"
+            >
+              Protrait, Product Photograpy
+            </p>
+          </div>
+          <div class="flex flex-col items-center gap-[15px] py-[35px] bg-white">
+            <h4 class="font-inter font-[500] text-[18px] text-fontColor1">
+              Advertising
+            </h4>
+            <p
+              class="font-inter font-[400] text-[15px] text-fontColor2 max-w-[260px] text-center"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae
+              nulla diam in ac dictum a urna viverra morbi.
+            </p>
+            <a
+              ><button
+                class="font-roboto font-[700] text-[12px] text-yColor hover:underline"
+              >
+                ORDER NOW >
+              </button></a
+            >
+          </div>
+        </div>
+      </div>
+      <!-- Price plan  code -->
+      <div id="pricePlan" class="flex flex-col gap-[25px]">
+        <div class="flex flex-col items-center">
+          <h2
+            class="font-inter font-[700] text-[32px] text-fontColor1 mb-[25px]"
+          >
+            Price Plans
+          </h2>
+          <p
+            class="font-inter font-[400] text-[15px] text-fontColor2 max-w-[438px] text-center mb-[30px]"
+          >
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+            sint. Velit officia consequat duis enim velit mollit. lorem ipsum
+          </p>
+        </div>
+        <div
+          class="grid grid-cols-3 gap-[20px] max-[1150px]:grid-cols-2 max-[865px]:grid-cols-1"
+        >
+          <div class="flex flex-col items-center py-[25px] bg-white">
+            <h3 class="font-inter font-[600] text-[24px] text-fontColor1">
+              Silver
+            </h3>
+            <div class="flex items-baseline gap-[10px] mb-[10px] mt-[15px]">
+              <h2 class="font-inter font-[700] text-[32px] text-fontColor1">
+                $10.00
+              </h2>
+              <p class="font-inter font-[400] text-[15px] text-fontColor1">
+                /Hour
+              </p>
+            </div>
+            <p
+              class="font-inter font-[400] text-[15px] text-fontColor2 text-center max-w-[248px]"
+            >
+              For most businesses that want to optimize web queries
+            </p>
+            <div
+              class="flex flex-col font-inter font-[400] text-[15px] gap-[17px] my-[21px]"
+            >
+              <div class="flex gap-[18px] items-center">
+                <img class="w-[17px] h-[12px]" src="/images/Vector9.png" />
+                <p class="text-fontColor1">UI Design</p>
+              </div>
+              <div class="flex gap-[18px] items-center">
+                <img class="w-[17px] h-[12px]" src="/images/Vector9.png" />
+                <p class="text-fontColor1">Web Development</p>
+              </div>
+              <div class="flex gap-[18px] items-center">
+                <img class="w-[13px] h-[12px]" src="/images/Vector10.png" />
+                <p class="text-fontColor2">Logo Design</p>
+              </div>
+              <div class="flex gap-[18px] items-center">
+                <img class="w-[13px] h-[12px]" src="/images/Vector10.png" />
+                <p class="text-fontColor2">See Optimization</p>
+              </div>
+              <div class="flex gap-[18px] items-center">
+                <img class="w-[13px] h-[12px]" src="/images/Vector10.png" />
+                <p class="text-fontColor2">WordPress Integration</p>
+              </div>
+              <div class="flex gap-[18px] items-center">
+                <img class="w-[13px] h-[12px]" src="/images/Vector10.png" />
+                <p class="text-fontColor2">5 Websites</p>
+              </div>
+              <div class="flex gap-[18px] items-center">
+                <img class="w-[13px] h-[12px]" src="/images/Vector10.png" />
+                <p class="text-fontColor2">Unlimited User</p>
+              </div>
+              <div class="flex gap-[18px] items-center">
+                <img class="w-[13px] h-[12px]" src="/images/Vector10.png" />
+                <p class="text-fontColor2">20 GB Bandwidth</p>
+              </div>
+            </div>
+            <a
+              ><button
+                class="font-inter font-[700] text-[14px] text-fontColor1 w-[169px] h-[38px] rounded-[30px] shadow-[0_1px_10px] shadow-black hover:underline"
+              >
+                ORDER NOW
+              </button></a
+            >
+          </div>
+          <div class="flex flex-col items-center pb-[25px] bg-white">
+            <p
+              class="font-inter font-[400] text-[15px] text-fontColor1 w-full text-center bg-yColor"
+            >
+              Most Popular
+            </p>
+            <h3 class="font-inter font-[600] text-[24px] text-fontColor1">
+              Gold
+            </h3>
+            <div class="flex items-baseline gap-[10px] mb-[10px] mt-[15px]">
+              <h2 class="font-inter font-[700] text-[32px] text-fontColor1">
+                $50.00
+              </h2>
+              <p class="font-inter font-[400] text-[15px] text-fontColor1">
+                /Hour
+              </p>
+            </div>
+            <p
+              class="font-inter font-[400] text-[15px] text-fontColor2 text-center max-w-[248px]"
+            >
+              For most businesses that want to optimize web queries
+            </p>
+            <div
+              class="flex flex-col font-inter font-[400] text-[15px] gap-[17px] my-[21px]"
+            >
+              <div class="flex gap-[18px] items-center">
+                <img class="w-[17px] h-[12px]" src="/images/Vector9.png" />
+                <p class="text-fontColor1">UI Design</p>
+              </div>
+              <div class="flex gap-[18px] items-center">
+                <img class="w-[17px] h-[12px]" src="/images/Vector9.png" />
+                <p class="text-fontColor1">Web Development</p>
+              </div>
+              <div class="flex gap-[18px] items-center">
+                <img class="w-[13px] h-[12px]" src="/images/Vector9.png" />
+                <p class="text-fontColor1">Logo Design</p>
+              </div>
+              <div class="flex gap-[18px] items-center">
+                <img class="w-[13px] h-[12px]" src="/images/Vector9.png" />
+                <p class="text-fontColor1">See Optimization</p>
+              </div>
+              <div class="flex gap-[18px] items-center">
+                <img class="w-[13px] h-[12px]" src="/images/Vector10.png" />
+                <p class="text-fontColor2">WordPress Integration</p>
+              </div>
+              <div class="flex gap-[18px] items-center">
+                <img class="w-[13px] h-[12px]" src="/images/Vector10.png" />
+                <p class="text-fontColor2">5 Websites</p>
+              </div>
+              <div class="flex gap-[18px] items-center">
+                <img class="w-[13px] h-[12px]" src="/images/Vector10.png" />
+                <p class="text-fontColor2">Unlimited User</p>
+              </div>
+              <div class="flex gap-[18px] items-center">
+                <img class="w-[13px] h-[12px]" src="/images/Vector10.png" />
+                <p class="text-fontColor2">20 GB Bandwidth</p>
+              </div>
+            </div>
+            <a
+              ><button
+                class="font-inter font-[700] text-[14px] text-fontColor1 w-[169px] h-[38px] rounded-[30px] bg-yColor hover:underline"
+              >
+                ORDER NOW
+              </button></a
+            >
+          </div>
+          <div class="flex flex-col items-center py-[25px] bg-white">
+            <h3 class="font-inter font-[600] text-[24px] text-fontColor1">
+              Diamond
+            </h3>
+            <div class="flex items-baseline gap-[10px] mb-[10px] mt-[15px]">
+              <h2 class="font-inter font-[700] text-[32px] text-fontColor1">
+                $80.00
+              </h2>
+              <p class="font-inter font-[400] text-[15px] text-fontColor1">
+                /Hour
+              </p>
+            </div>
+            <p
+              class="font-inter font-[400] text-[15px] text-fontColor2 text-center max-w-[248px]"
+            >
+              For most businesses that want to optimize web queries
+            </p>
+            <div
+              class="flex flex-col font-inter font-[400] text-[15px] gap-[17px] my-[21px]"
+            >
+              <div class="flex gap-[18px] items-center">
+                <img class="w-[17px] h-[12px]" src="/images/Vector9.png" />
+                <p class="text-fontColor1">UI Design</p>
+              </div>
+              <div class="flex gap-[18px] items-center">
+                <img class="w-[17px] h-[12px]" src="/images/Vector9.png" />
+                <p class="text-fontColor1">Web Development</p>
+              </div>
+              <div class="flex gap-[18px] items-center">
+                <img class="w-[13px] h-[12px]" src="/images/Vector9.png" />
+                <p class="text-fontColor1">Logo Design</p>
+              </div>
+              <div class="flex gap-[18px] items-center">
+                <img class="w-[13px] h-[12px]" src="/images/Vector9.png" />
+                <p class="text-fontColor1">See Optimization</p>
+              </div>
+              <div class="flex gap-[18px] items-center">
+                <img class="w-[13px] h-[12px]" src="/images/Vector9.png" />
+                <p class="text-fontColor1">WordPress Integration</p>
+              </div>
+              <div class="flex gap-[18px] items-center">
+                <img class="w-[13px] h-[12px]" src="/images/Vector9.png" />
+                <p class="text-fontColor1">5 Websites</p>
+              </div>
+              <div class="flex gap-[18px] items-center">
+                <img class="w-[13px] h-[12px]" src="/images/Vector9.png" />
+                <p class="text-fontColor1">Unlimited User</p>
+              </div>
+              <div class="flex gap-[18px] items-center">
+                <img class="w-[13px] h-[12px]" src="/images/Vector9.png" />
+                <p class="text-fontColor1">20 GB Bandwidth</p>
+              </div>
+            </div>
+            <a
+              ><button
+                class="font-inter font-[700] text-[14px] text-fontColor1 w-[169px] h-[38px] rounded-[30px] shadow-[0_1px_10px] shadow-black hover:underline"
+              >
+                ORDER NOW
+              </button></a
+            >
+          </div>
+        </div>
+      </div>
+      <!-- Recommendation code -->
+      <div id="recommendation" class="flex flex-col gap-[25px]">
+        <div class="flex flex-col items-center">
+          <h2
+            class="font-inter font-[700] text-[32px] text-fontColor1 mb-[25px]"
+          >
+            Recommendations
+          </h2>
+          <p
+            class="font-inter font-[400] text-[15px] text-fontColor2 max-w-[438px] text-center mb-[30px]"
+          >
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+            sint. Velit officia consequat duis enim velit mollit. lorem ipsum
+          </p>
+        </div>
+        <div
+          class="grid grid-cols-3 gap-[20px] max-[1150px]:grid-cols-2 max-[865px]:grid-cols-1"
+        >
+          <div class="flex flex-col gap-[17px] p-[25px] bg-white">
+            <div class="flex gap-[10px]">
+              <img src="/images/star.png" />
+              <img src="/images/star.png" />
+              <img src="/images/star.png" />
+              <img src="/images/star.png" />
+              <img src="/images/star.png" />
+            </div>
+            <h4 class="font-inter font-[500] text-[18px] text-fontColor1">
+              Great Quality!
+            </h4>
+            <p
+              class="font-inter font-[400] text-[15px] text-fontColor2 mb-[13px]"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae
+              nulla diam in ac dictum a urna viverra morbi. Morbi donec amet....
+            </p>
+            <div class="flex items-center gap-[13px]">
+              <img src="/images/james.png" />
+              <div class="flex flex-col gap-[5px]">
+                <p class="font-inter font-[500] text-[18px] text-fontColor1">
+                  James Gouse
+                </p>
+                <p class="font-inter font-[400] text-[15px] text-fontColor2">
+                  Graphic Designer
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col gap-[17px] p-[25px] bg-white">
+            <div class="flex gap-[10px]">
+              <img src="/images/star.png" />
+              <img src="/images/star.png" />
+              <img src="/images/star.png" />
+              <img src="/images/star.png" />
+              <img src="/images/star.png" />
+            </div>
+            <h4 class="font-inter font-[500] text-[18px] text-fontColor1">
+              Amazing Work!
+            </h4>
+            <p
+              class="font-inter font-[400] text-[15px] text-fontColor2 mb-[13px]"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae
+              nulla diam in ac dictum a urna viverra morbi. Morbi donec amet....
+            </p>
+            <div class="flex items-center gap-[13px]">
+              <img src="/images/tiana.png" />
+              <div class="flex flex-col gap-[5px]">
+                <p class="font-inter font-[500] text-[18px] text-fontColor1">
+                  Tiana Philips
+                </p>
+                <p class="font-inter font-[400] text-[15px] text-fontColor2">
+                  Photographer
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col gap-[17px] p-[25px] bg-white">
+            <div class="flex gap-[10px]">
+              <img src="/images/star.png" />
+              <img src="/images/star.png" />
+              <img src="/images/star.png" />
+              <img src="/images/star.png" />
+              <img src="/images/star.png" />
+            </div>
+            <h4 class="font-inter font-[500] text-[18px] text-fontColor1">
+              Great Quality!
+            </h4>
+            <p
+              class="font-inter font-[400] text-[15px] text-fontColor2 mb-[13px]"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae
+              nulla diam in ac dictum a urna viverra morbi. Morbi donec amet....
+            </p>
+            <div class="flex items-center gap-[13px]">
+              <img src="/images/talan.png" />
+              <div class="flex flex-col gap-[5px]">
+                <p class="font-inter font-[500] text-[18px] text-fontColor1">
+                  Talan Westervelt
+                </p>
+                <p class="font-inter font-[400] text-[15px] text-fontColor2">
+                  Business Man
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Education code -->
+      <div id="education" class="flex flex-col gap-[25px]">
+        <div class="flex flex-col items-center">
+          <h2
+            class="font-inter font-[700] text-[32px] text-fontColor1 mb-[25px]"
+          >
+            Education
+          </h2>
+          <p
+            class="font-inter font-[400] text-[15px] text-fontColor2 max-w-[438px] text-center mb-[30px]"
+          >
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+            sint. Velit officia consequat duis enim velit mollit. lorem ipsum
+          </p>
+        </div>
+        <div class="flex flex-col py-[30px] px-[30px] bg-white">
+          <div
+            class="flex justify-between border-b-[1.5px] gap-[10px] border-borderColor py-[15px]"
+          >
+            <div class="flex flex-col gap-[25px] basis-1/3">
+              <h4
+                class="font-inter font-[500] text-[18px] text-fontColor1 max-[600px]:text-[16px]"
+              >
+                University Of Toronto
+              </h4>
+              <div class="flex gap-[20px] max-[1080px]:flex-wrap">
+                <p class="font-inter font-[400] text-[15px] text-fontColor1">
+                  Student
+                </p>
+                <p
+                  class="flex justify-center items-center font-inter font-[400] text-[10px] text-white bg-yColor px-[5px]"
+                >
+                  Jan 2016-Dec 2021
+                </p>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-[25px] basis-2/3">
+              <h4 class="font-inter font-[500] text-[18px] text-fontColor1">
+                Certificate Of Web Training
+              </h4>
+              <p
+                class="font-inter font-[400] text-[15px] text-fontColor2 mr-[20px]"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet
+                dapibus nibh ut faucibus nunc, egestas id amet porttitor.
+                Pulvinar quisque sed amet, nulla nunc. Eleifend sodales posuere
+                fusce tempus etiam et pellentesque. Molestie risus enim neque
+                eget dui.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="flex justify-between border-b-[1.5px] gap-[10px] border-borderColor py-[15px]"
+          >
+            <div class="flex flex-col gap-[25px] basis-1/3">
+              <h4
+                class="font-inter font-[500] text-[18px] text-fontColor1 max-[600px]:text-[16px]"
+              >
+                Programming Courses
+              </h4>
+              <div class="flex gap-[20px] max-[1080px]:flex-wrap">
+                <p class="font-inter font-[400] text-[15px] text-fontColor1">
+                  Student
+                </p>
+                <p
+                  class="flex justify-center items-center font-inter font-[400] text-[10px] text-white bg-yColor px-[5px]"
+                >
+                  Jan 2016-Dec 2021
+                </p>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-[25px] basis-2/3">
+              <h4
+                class="font-inter font-[500] text-[18px] text-fontColor1 max-[600px]:text-[16px]"
+              >
+                Certificate Of Web Training
+              </h4>
+              <p
+                class="font-inter font-[400] text-[15px] text-fontColor2 mr-[20px]"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet
+                dapibus nibh ut faucibus nunc, egestas id amet porttitor.
+                Pulvinar quisque sed amet, nulla nunc. Eleifend sodales posuere
+                fusce tempus etiam et pellentesque. Molestie risus enim neque
+                eget dui.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex justify-between py-[10px] gap-[10px]">
+            <div class="flex flex-col gap-[25px] basis-1/3">
+              <h4
+                class="font-inter font-[500] text-[18px] text-fontColor1 max-[600px]:text-[16px]"
+              >
+                Web Developer Courses
+              </h4>
+              <div class="flex gap-[20px] max-[1080px]:flex-wrap">
+                <p class="font-inter font-[400] text-[15px] text-fontColor1">
+                  Student
+                </p>
+                <p
+                  class="flex justify-center items-center font-inter font-[400] text-[10px] text-white bg-yColor px-[5px]"
+                >
+                  Jan 2016-Dec 2021
+                </p>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-[25px] basis-2/3">
+              <h4
+                class="font-inter font-[500] text-[18px] text-fontColor1 max-[600px]:text-[16px]"
+              >
+                Certificate Of Web Training
+              </h4>
+              <p
+                class="font-inter font-[400] text-[15px] text-fontColor2 mr-[20px]"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet
+                dapibus nibh ut faucibus nunc, egestas id amet porttitor.
+                Pulvinar quisque sed amet, nulla nunc. Eleifend sodales posuere
+                fusce tempus etiam et pellentesque. Molestie risus enim neque
+                eget dui.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Work history code -->
+      <div id="workHistory" class="flex flex-col gap-[25px]">
+        <div class="flex flex-col items-center">
+          <h2
+            class="font-inter font-[700] text-[32px] text-fontColor1 mb-[25px]"
+          >
+            Work History
+          </h2>
+          <p
+            class="font-inter font-[400] text-[15px] text-fontColor2 max-w-[438px] text-center mb-[30px]"
+          >
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+            sint. Velit officia consequat duis enim velit mollit. lorem ipsum
+          </p>
+        </div>
+        <div class="flex flex-col py-[30px] px-[30px] bg-white">
+          <div
+            class="flex justify-between border-b-[1.5px] border-borderColor gap-[10px] py-[15px]"
+          >
+            <div class="flex flex-col gap-[25px] basis-1/3">
+              <h4
+                class="font-inter font-[500] text-[18px] text-fontColor1 max-[600px]:text-[16px]"
+              >
+                Lead Web Designer
+              </h4>
+              <div class="flex gap-[20px] max-[1080px]:flex-wrap">
+                <p class="font-inter font-[400] text-[15px] text-fontColor1">
+                  Student
+                </p>
+                <p
+                  class="flex justify-center items-center font-inter font-[400] text-[10px] text-white bg-yColor px-[5px]"
+                >
+                  Jan 2016-Dec 2021
+                </p>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-[25px] basis-2/3">
+              <h4
+                class="font-inter font-[500] text-[18px] text-fontColor1 max-[600px]:text-[16px]"
+              >
+                Certificate Of Web Training
+              </h4>
+              <p
+                class="font-inter font-[400] text-[15px] text-fontColor2 mr-[20px]"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet
+                dapibus nibh ut faucibus nunc, egestas id amet porttitor.
+                Pulvinar quisque sed amet, nulla nunc. Eleifend sodales posuere
+                fusce tempus etiam et pellentesque. Molestie risus enim neque
+                eget dui.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="flex justify-between border-b-[1.5px] border-borderColor gap-[10px] py-[15px]"
+          >
+            <div class="flex flex-col gap-[25px] basis-1/3">
+              <h4
+                class="font-inter font-[500] text-[18px] text-fontColor1 max-[600px]:text-[16px]"
+              >
+                Junior Web Designer
+              </h4>
+              <div class="flex gap-[20px] max-[1080px]:flex-wrap">
+                <p class="font-inter font-[400] text-[15px] text-fontColor1">
+                  Student
+                </p>
+                <p
+                  class="flex justify-center items-center font-inter font-[400] text-[10px] text-white bg-yColor px-[5px]"
+                >
+                  Jan 2016-Dec 2021
+                </p>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-[25px] basis-2/3">
+              <h4
+                class="font-inter font-[500] text-[18px] text-fontColor1 max-[600px]:text-[16px]"
+              >
+                Certificate Of Web Training
+              </h4>
+              <p
+                class="font-inter font-[400] text-[15px] text-fontColor2 mr-[20px]"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet
+                dapibus nibh ut faucibus nunc, egestas id amet porttitor.
+                Pulvinar quisque sed amet, nulla nunc. Eleifend sodales posuere
+                fusce tempus etiam et pellentesque. Molestie risus enim neque
+                eget dui.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex justify-between gap-[10px] py-[10px]">
+            <div class="flex flex-col gap-[25px] basis-1/3">
+              <h4
+                class="font-inter font-[500] text-[18px] text-fontColor1 max-[600px]:text-[16px]"
+              >
+                Senior Web Designer
+              </h4>
+              <div class="flex gap-[20px] max-[1080px]:flex-wrap">
+                <p class="font-inter font-[400] text-[15px] text-fontColor1">
+                  Student
+                </p>
+                <p
+                  class="flex justify-center items-center font-inter font-[400] text-[10px] text-white bg-yColor px-[5px]"
+                >
+                  Jan 2016-Dec 2021
+                </p>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-[25px] basis-2/3">
+              <h4
+                class="font-inter font-[500] text-[18px] text-fontColor1 max-[600px]:text-[16px]"
+              >
+                Certificate Of Web Training
+              </h4>
+              <p
+                class="font-inter font-[400] text-[15px] text-fontColor2 mr-[20px]"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet
+                dapibus nibh ut faucibus nunc, egestas id amet porttitor.
+                Pulvinar quisque sed amet, nulla nunc. Eleifend sodales posuere
+                fusce tempus etiam et pellentesque. Molestie risus enim neque
+                eget dui.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Portfolio code -->
+      <div id="portfolio" class="flex flex-col gap-[25px]">
+        <div class="flex flex-col items-center">
+          <h2
+            class="font-inter font-[700] text-[32px] text-fontColor1 mb-[25px]"
+          >
+            Portfolio
+          </h2>
+          <p
+            class="font-inter font-[400] text-[15px] text-fontColor2 max-w-[438px] text-center"
+          >
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+            sint. Velit officia consequat duis enim velit mollit. lorem ipsum
+          </p>
+          <div
+            class="flex gap-[35px] font-inter font-[500] text-[18px] text-fontColor1 my-[50px] max-[960px]:hidden"
+          >
+            <p class="text-yColor">All Categories</p>
+            <p>UI Design</p>
+            <p>Web Templates</p>
+            <p>Logo</p>
+            <p>Branding</p>
+          </div>
+        </div>
+        <div
+          class="grid grid-cols-3 gap-[20px] max-[1150px]:grid-cols-2 max-[865px]:grid-cols-1"
+        >
+          <div class="relative">
+            <img class="w-full" src="/images/Image1.png" />
+            <div
+              class="flex items-center justify-center absolute top-0 left-0 bg-yColor w-full h-full font-inter font-[500] text-[70px] opacity-0 hover:opacity-80"
+            >
+              <p>+</p>
+            </div>
+          </div>
+          <div class="relative">
+            <img class="w-full" src="/images/Image2.png" />
+            <div
+              class="flex items-center justify-center absolute top-0 left-0 bg-yColor w-full h-full font-inter font-[500] text-[70px] opacity-0 hover:opacity-80"
+            >
+              <p>+</p>
+            </div>
+          </div>
+          <div class="relative">
+            <img class="w-full" src="/images/Image3.png" />
+            <div
+              class="flex items-center justify-center absolute top-0 left-0 bg-yColor w-full h-full font-inter font-[500] text-[70px] opacity-0 hover:opacity-80"
+            >
+              <p>+</p>
+            </div>
+          </div>
+          <div class="relative">
+            <img class="w-full" src="/images/Image4.png" />
+            <div
+              class="flex items-center justify-center absolute top-0 left-0 bg-yColor w-full h-full font-inter font-[500] text-[70px] opacity-0 hover:opacity-80"
+            >
+              <p>+</p>
+            </div>
+          </div>
+          <div class="relative">
+            <img class="w-full" src="/images/Image5.png" />
+            <div
+              class="flex items-center justify-center absolute top-0 left-0 bg-yColor w-full h-full font-inter font-[500] text-[70px] opacity-0 hover:opacity-80"
+            >
+              <p>+</p>
+            </div>
+          </div>
+          <div class="relative">
+            <img class="w-full" src="/images/Image6.png" />
+            <div
+              class="flex items-center justify-center absolute top-0 left-0 bg-yColor w-full h-full font-inter font-[500] text-[70px] opacity-0 hover:opacity-80"
+            >
+              <p>+</p>
+            </div>
+          </div>
+          <div class="relative">
+            <img class="w-full" src="/images/Image7.png" />
+            <div
+              class="flex items-center justify-center absolute top-0 left-0 bg-yColor w-full h-full font-inter font-[500] text-[70px] opacity-0 hover:opacity-80"
+            >
+              <p>+</p>
+            </div>
+          </div>
+          <div class="relative">
+            <img class="w-full" src="/images/Image8.png" />
+            <div
+              class="flex items-center justify-center absolute top-0 left-0 bg-yColor w-full h-full font-inter font-[500] text-[70px] opacity-0 hover:opacity-80"
+            >
+              <p>+</p>
+            </div>
+          </div>
+          <div class="relative">
+            <img class="w-full" src="/images/Image9.png" />
+            <div
+              class="flex items-center justify-center absolute top-0 left-0 bg-yColor w-full h-full font-inter font-[500] text-[70px] opacity-0 hover:opacity-80"
+            >
+              <p>+</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Blog code -->
+      <div id="blog" class="flex flex-col gap-[25px]">
+        <div class="flex flex-col items-center">
+          <h2
+            class="font-inter font-[700] text-[32px] text-fontColor1 mb-[25px]"
+          >
+            Blog
+          </h2>
+          <p
+            class="font-inter font-[400] text-[15px] text-fontColor2 max-w-[438px] text-center mb-[30px]"
+          >
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+            sint. Velit officia consequat duis enim velit mollit. lorem ipsum
+          </p>
+        </div>
+        <div
+          class="grid grid-cols-3 gap-[20px] max-[1150px]:grid-cols-2 max-[865px]:grid-cols-1"
+        >
+          <div>
+            <img class="w-full" src="images/Image1.png" />
+            <div class="flex flex-col p-[25px] gap-[9px] bg-white">
+              <h4 class="font-inter font-[500] text-[18px] text-fontColor1">
+                How To Make Templates
+              </h4>
+              <p
+                class="font-inter font-[400] text-[15px] max-w-[268px] text-fontColor2"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae
+                nulla diam in ac dictum a urna
+              </p>
+              <a
+                ><button
+                  class="font-inter font-[500] text-[18px] text-yColor hover:underline"
+                >
+                  Learn More >
+                </button></a
+              >
+            </div>
+          </div>
+          <div>
+            <img class="w-full" src="images/Image2.png" />
+            <div class="flex flex-col p-[25px] gap-[9px] bg-white">
+              <h4 class="font-inter font-[500] text-[18px] text-fontColor1">
+                Make Business Card
+              </h4>
+              <p
+                class="font-inter font-[400] text-[15px] max-w-[268px] text-fontColor2"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae
+                nulla diam in ac dictum a urna
+              </p>
+              <a
+                ><button
+                  class="font-inter font-[500] text-[18px] text-yColor hover:underline"
+                >
+                  Learn More >
+                </button></a
+              >
+            </div>
+          </div>
+          <div>
+            <img class="w-full" src="images/Image3.png" />
+            <div class="flex flex-col p-[25px] gap-[9px] bg-white">
+              <h4 class="font-inter font-[500] text-[18px] text-fontColor1">
+                How To Make Flyer Design
+              </h4>
+              <p
+                class="font-inter font-[400] text-[15px] max-w-[268px] text-fontColor2"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae
+                nulla diam in ac dictum a urna
+              </p>
+              <a
+                ><button
+                  class="font-inter font-[500] text-[18px] text-yColor hover:underline"
+                >
+                  Learn More >
+                </button></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Info contact code -->
+      <div id="infoContact" class="flex gap-[30px] max-[1151px]:flex-col">
+        <div
+          id="info"
+          class="flex flex-col basis-3/5 gap-[50px] "
+        >
+          <h2
+            class="font-inter font-[700] text-[32px] text-fontColor1 max-[1285px]:text-[28px]"
+          >
+            Leave us your info
+          </h2>
+          <form
+            id="infoForm"
+            class="flex flex-col gap-[8px] p-[25px] w-full bg-white"
+          >
+            <label
+              for="full_name"
+              class="font-inter font-[500] font-[18px] text-fontColor2"
+              >Your Full Name(Required)</label
+            >
+            <input id="full_name" type="text" class="mb-[17px] bg-mainColor" />
+            <label
+              for="email"
+              class="font-inter font-[500] font-[18px] text-fontColor2"
+              >Your Email(Required)</label
+            >
+            <input id="email" type="email" class="mb-[17px] bg-mainColor" />
+            <label
+              for="subject"
+              class="font-inter font-[500] font-[18px] text-fontColor2"
+              >Subject</label
+            >
+            <input id="subject" type="text" class="mb-[17px] bg-mainColor" />
+            <label
+              for="message"
+              class="font-inter font-[500] font-[18px] text-fontColor2"
+              >Your Message</label
+            >
+            <textarea id="message" class="h-[283px] bg-mainColor"></textarea>
+            <button
+              id="send_message"
+              class="font-inter font-[600] font-[14px] text-fontColor1 mt-[17px] w-[159px] h-[35px] my-auto bg-yColor"
+            >
+              SEND MESSAGE
+            </button>
+          </form>
+        </div>
+        <div
+          id="contact"
+          class="flex flex-col basis-2/5 gap-[18px] "
+        >
+          <h2
+            class="font-inter font-[700] text-[32px] text-fontColor1 mb-[32px] max-[1285px]:text-[28px]"
+          >
+            Contact Information
+          </h2>
+          <div
+            class="flex flex-col gap-[30px] p-[25px_25px_17px] bg-white w-full"
+          >
+            <div
+              class="flex items-center justify-center rounded-[30px] w-[40px] h-[40px] self-center bg-yColor"
+            >
+              <img src="/images/location.png" />
+            </div>
+            <div class="flex flex-col gap-[9px]">
+              <div class="flex justify-between">
+                <p class="font-inter font-[500] text-[18px] text-fontColor2">
+                  Country:
+                </p>
+                <p class="font-inter font-[400] text-[15px] text-fontColor2">
+                  Bangladesh
+                </p>
+              </div>
+              <div class="flex justify-between">
+                <p class="font-inter font-[500] text-[18px] text-fontColor2">
+                  City:
+                </p>
+                <p class="font-inter font-[400] text-[15px] text-fontColor2">
+                  Dhaka
+                </p>
+              </div>
+              <div class="flex justify-between">
+                <p class="font-inter font-[500] text-[18px] text-fontColor2">
+                  Address:
+                </p>
+                <p class="font-inter font-[400] text-[15px] text-fontColor2">
+                  35 vhatara, Badda
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex flex-col gap-[30px] p-[25px_25px_17px] bg-white w-full"
+          >
+            <div
+              class="flex items-center justify-center rounded-[30px] w-[40px] h-[40px] self-center bg-yColor"
+            >
+              <img src="/images/mail.png" />
+            </div>
+            <div class="flex flex-col gap-[9px]">
+              <div class="flex justify-between">
+                <p class="font-inter font-[500] text-[18px] text-fontColor2">
+                  Email:
+                </p>
+                <p class="font-inter font-[400] text-[15px] text-fontColor2">
+                  Yourmail@gmail.com
+                </p>
+              </div>
+              <div class="flex justify-between">
+                <p class="font-inter font-[500] text-[18px] text-fontColor2">
+                  Skype:
+                </p>
+                <p class="font-inter font-[400] text-[15px] text-fontColor2">
+                  @username
+                </p>
+              </div>
+              <div class="flex justify-between">
+                <p class="font-inter font-[500] text-[18px] text-fontColor2">
+                  Telegram:
+                </p>
+                <p class="font-inter font-[400] text-[15px] text-fontColor2">
+                  @username
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex flex-col gap-[30px] p-[25px_25px_17px] bg-white w-full"
+          >
+            <div
+              class="flex items-center justify-center rounded-[30px] w-[40px] h-[40px] self-center bg-yColor"
+            >
+              <img src="/images/Mobile.png" />
+            </div>
+            <div class="flex flex-col gap-[9px]">
+              <div class="flex justify-between">
+                <p class="font-inter font-[500] text-[18px] text-fontColor2">
+                  Support Services:
+                </p>
+                <p class="font-inter font-[400] text-[15px] text-fontColor2">
+                  15369
+                </p>
+              </div>
+              <div class="flex justify-between">
+                <p class="font-inter font-[500] text-[18px] text-fontColor2">
+                  Office:
+                </p>
+                <p class="font-inter font-[400] text-[15px] text-fontColor2">
+                  +58 (021)356 587 235
+                </p>
+              </div>
+              <div class="flex justify-between">
+                <p class="font-inter font-[500] text-[18px] text-fontColor2">
+                  Personal:
+                </p>
+                <p class="font-inter font-[400] text-[15px] text-fontColor2">
+                  +58 (021)356 587 235
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Google map code -->
+      <div id="map">
+        <iframe
+          class="w-full h-[300px]"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d883.4903098562652!2d83.46685164428213!3d27.656670901579215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2snp!4v1685292879187!5m2!1sen!2snp"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+      <!-- Logo code -->
+      <div
+        id="logo"
+        class="flex justify-between max-[1070px]:grid max-[1070px]:grid-cols-2"
+      >
+        <img src="/images/Frame1.png" />
+        <img src="/images/Frame2.png" />
+        <img src="/images/Frame3.png" />
+        <img src="/images/Frame4.png" />
+      </div>
+      <!-- Footer code -->
+      <div
+        id="footer"
+        class="w-full font-inter font-[400] text-[15px] text-fontColor2 text-center bg-white py-[18px]"
+      >
+        <p>2021 All Rights Reserved.Ojjomedia</p>
+      </div>
+    </section>
+    <!-- Middle Menu Code End -->
+    <!-- Right Menu Code Start -->
+    <section
+      id="rightMenu"
+      class="flex flex-col items-center gap-[80px] w-[80px] h-full pt-[52px] fixed top-0 right-0 bg-white max-[767px]:w-[60px]"
+    >
+      <div class="flex flex-col items-center gap-[20px]">
+        <a
+        ><button><img src="/images/Vector2.png" /></button
+      ></a>
+        <button class="hidden max-[767px]:block" onclick="toggle()">
+          <img class="w-[40px] h-[40px]" src="/images/menu.png">
+        </button>
+      </div>
+      
+      <div class="flex flex-col items-center gap-[35px]">
+        <a
+          ><button><img src="/images/Home.png" /></button
+        ></a>
+        <a
+          class="flex justify-center items-center w-[40px] h-[40px] rounded-[25px] bg-borderColor"
+          ><button><img src="/images/Vector3.png" /></button
+        ></a>
+        <a
+          class="flex justify-center items-center w-[40px] h-[40px] rounded-[25px] bg-borderColor"
+          ><button><img src="/images/Vector4.png" /></button
+        ></a>
+        <a
+          class="flex justify-center items-center w-[40px] h-[40px] rounded-[25px] bg-borderColor"
+          ><button><img src="/images/Vector5.png" /></button
+        ></a>
+        <a
+          class="flex justify-center items-center w-[40px] h-[40px] rounded-[25px] bg-borderColor"
+          ><button><img src="/images/Vector6.png" /></button
+        ></a>
+        <a
+          class="flex justify-center items-center w-[40px] h-[40px] rounded-[25px] bg-borderColor"
+          ><button><img src="/images/Vector7.png" /></button
+        ></a>
+      </div>
+    </section>
+    <script> 
+       const leftMenu=document.getElementById("leftMenu");
+       var screenWidth;
+       setInterval(getting,100);
+       setInterval(resetting,100);
+       
+      function getting()
+      {
+          screenWidth=window.innerWidth;
+      }
+
+      function resetting()
+      {
+        if(screenWidth>767)
+       { 
+          if( !leftMenu.classList.contains('w-[305px]'))
+          {
+            leftMenu.classList.remove('w-[150px]');
+            leftMenu.classList.add('w-[305px]');
+           
+          }
+
+          if( !leftMenu.classList.contains('max-[767px]:hidden'))
+          {
+            leftMenu.classList.remove('hidden');
+            leftMenu.classList.remove('block');
+            leftMenu.classList.add('max-[767px]:hidden');
+          }
+        }
+      }
+      
+       function toggle()
+       {
+         if (leftMenu.classList.contains('hidden')||leftMenu.classList.contains('max-[767px]:hidden'))
+          {
+            leftMenu.classList.remove('max-[767px]:hidden');
+            leftMenu.classList.add('block');
+            leftMenu.classList.remove('hidden');
+            leftMenu.classList.add('w-[150px]');
+            leftMenu.classList.remove('w-[305px]')
+          }
+
+         else 
+          {
+            leftMenu.classList.add('hidden');
+            leftMenu.classList.remove('block');
+            leftMenu.classList.remove('w-[150px]');
+            leftMenu.classList.add('w-[305px]');
+          }
+         
+         }
+         
+    </script>
+  </body>
+</html>
