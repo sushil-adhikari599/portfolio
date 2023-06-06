@@ -12,6 +12,24 @@
         padding: 0;
         box-sizing: border-box;
       }
+      .defaultSideBar{
+        width:305px;
+        @media screen and (max-width: 767px) {
+           display: none;
+        }
+      }
+      .showSideBar {
+        position:absolute;
+        z-index:10;
+        opacity: 0.94;
+        background-color:rgb(186, 195, 204);
+        display:block;
+        width:170px;
+      }
+      .hideSideBar {
+        display: hidden;
+        width: 305px;
+      }
     </style>
     <!-- embedded code for fonts -->
     <link
@@ -50,18 +68,19 @@
   </head>
   <body class="flex bg-mainColor">
     <!-- Left Menu Code -->
-    <section
-      id="leftMenu"
-      class="flex flex-col justify-between bg-white w-[305px] h-full p-[1%] gap-[25px]  max-[767px]:hidden  "
+    <section id="leftMenu" class=" defaultSideBar p-[10px] rounded-[10px] ">
+      <div   
+      class="flex flex-col justify-between bg-white w-full  p-[10px] gap-[25px]    "
     >
       <!--Profile  -->
+     
       <div
         id="profile"
         class=" flex flex-col items-center gap-[15px] pb-[25px]  border-b border-1.5px border-borderColor border-solid "
       >
       <div class="relative">
         <img class="  w-[150px] h-[150px] " src="/images/Profile.jpg" />
-        <img class="w-[16px] h-[16px] absolute bottom-[7%] right-[7%] " src="/images/Available.png"/>
+        <img class="w-[16px] h-[16px] absolute bottom-[7%] right-[7%] animate-bounce  " src="/images/Available.png"/>
       </div>
         
         <h4 class="mt-[16px] font-inter font-[500] text-[18px] text-fontColor1">
@@ -239,25 +258,25 @@
           Extra Skills
         </h4>
         <div class="flex gap-[15px]">
-          <img src="/images/Icons1.png" />
+          <img  class="h-[15px] w-[15px]" src="/images/Icons1.png" />
           <p class="font-inter font-[400] text-[15px] text-fontColor2">
             Bootstrap, Materialize
           </p>
         </div>
         <div class="flex gap-[15px]">
-          <img src="/images/Icons1.png" />
+          <img  class="h-[15px] w-[15px]" src="/images/Icons1.png" />
           <p class="font-inter font-[400] text-[15px] text-fontColor2">
             Stylus, Saas, Less
           </p>
         </div>
         <div class="flex gap-[15px]">
-          <img src="/images/Icons1.png" />
+          <img  class="h-[15px] w-[15px]" src="/images/Icons1.png" />
           <p class="font-inter font-[400] text-[15px] text-fontColor2">
             Gulp, Webpack, Grunt
           </p>
         </div>
         <div class="flex gap-[15px]">
-          <img src="/images/Icons1.png" />
+          <img class="h-[15px] w-[15px]" src="/images/Icons1.png" />
           <p class="font-inter font-[400] text-[15px] text-fontColor2">
             GIT Knowledge
           </p>
@@ -266,24 +285,26 @@
       <!-- Button -->
       <button
         id="button/cv2"
-        class="flex justify-center items-center gap-[8px] bg-yColor w-[98%] h-[40px] my-[4px]"
+        class="flex justify-center items-center gap-[8px]  w-[98%] h-[40px] my-[4px]  bg-yColor  hover:animate-bounce hover:transition-transform hover:justify-around hover:bg-gradient-to-r from-yColor to-mainColor"
       >
-        <p class="font-inter font-[600] text-[14px] text-fontColor1">
+        <p class=" font-inter font-[600] text-[14px] text-fontColor1 ">
           DOWNLOAD CV
         </p>
-        <img src="/images/Vector1.png" />
+        <img  src="/images/Vector1.png" />
       </button>
+    </div>
     </section>
+    
     <!-- Left Menu Code End -->
     <!-- Middle Menu Code Start -->
     <section
       id="middleMenu"
-      class="flex flex-col overflow-auto w-full gap-[70px] px-[2%] py-[20px] mr-[80px] max-[767px]:mr-[60px]"
+      class="flex flex-col overflow-auto w-full gap-[70px] px-[10px] py-[20px] mr-[80px] max-[767px]:mr-[60px]"
     >
       <!-- Main menu code -->
       <div
         id="mainMenu"
-        class="flex justify-between  px-[2%] py-[30px] bg-white max-[450px]:flex-wrap "
+        class="flex justify-between  px-[10px] py-[30px] bg-white max-[450px]:flex-wrap "
       >
         <div class="flex flex-col basis-2/3 gap-[18px] justify-center  max-[450px]:order-2 max-[450px]:grow">
           <div
@@ -304,9 +325,9 @@
           </p>
           <button
             id="button/hire"
-            class="flex justify-center items-center gap-[10px] bg-yColor w-[154px] h-[51px] mt-[7px]"
+            class="flex justify-center items-center gap-[10px] bg-yColor w-[154px] h-[51px] mt-[7px]   hover:justify-around hover:transition-transform  hover:bg-gradient-to-r from-yColor to-mainColor"
           >
-            <p class="font-inter font-[600] text-[14px] text-fontColor1">
+            <p class="font-inter font-[600] text-[14px] text-fontColor1  ">
               HIRE ME
             </p>
             <img src="/images/Vector8.png" />
@@ -1433,55 +1454,47 @@
     </section>
     <script> 
        const leftMenu=document.getElementById("leftMenu");
-       var screenWidth;
-       setInterval(getting,100);
-       setInterval(resetting,100);
-       
-      function getting()
-      {
-          screenWidth=window.innerWidth;
-      }
-
+       const middleMenu=document.getElementById("middleMenu");
       function resetting()
       {
-        if(screenWidth>767)
-       { 
-          if( !leftMenu.classList.contains('w-[305px]'))
-          {
-            leftMenu.classList.remove('w-[150px]');
-            leftMenu.classList.add('w-[305px]');
-           
-          }
-
-          if( !leftMenu.classList.contains('max-[767px]:hidden'))
-          {
-            leftMenu.classList.remove('hidden');
-            leftMenu.classList.remove('block');
-            leftMenu.classList.add('max-[767px]:hidden');
-          }
+        
+        var screenWidth=window.innerWidth;
+        if(screenWidth>767 && (leftMenu.classList.contains('hideSideBar') || !leftMenu.classList.contains('defaultSideBar')))
+       {  
+            leftMenu.classList.add('defaultSideBar');
+            leftMenu.classList.remove('showSideBar');
+            leftMenu.classList.remove('hideSideBar');
+            
         }
       }
       
        function toggle()
        {
-         if (leftMenu.classList.contains('hidden')||leftMenu.classList.contains('max-[767px]:hidden'))
+         if (leftMenu.classList.contains('hideSideBar')||leftMenu.classList.contains('defaultSideBar'))
           {
-            leftMenu.classList.remove('max-[767px]:hidden');
-            leftMenu.classList.add('block');
-            leftMenu.classList.remove('hidden');
-            leftMenu.classList.add('w-[150px]');
-            leftMenu.classList.remove('w-[305px]')
+            leftMenu.classList.remove('defaultSideBar');
+            leftMenu.classList.add('showSideBar');
+            leftMenu.classList.remove('hideSideBar');
           }
 
          else 
           {
-            leftMenu.classList.add('hidden');
-            leftMenu.classList.remove('block');
-            leftMenu.classList.remove('w-[150px]');
-            leftMenu.classList.add('w-[305px]');
+           
+            leftMenu.classList.add('hideSideBar');
+            leftMenu.classList.remove('showSideBar');
+            leftMenu.classList.add('defaultSideBar');
+            
           }
-         
          }
+         function clickToggle()
+         {
+           if(leftMenu.classList.contains('showSideBar'))
+           {
+            toggle();
+           }
+         }
+         middleMenu.addEventListener('click', clickToggle);
+         window.addEventListener('resize',resetting);
          
     </script>
   </body>
