@@ -19,17 +19,22 @@
         }
       }
       .showSideBar {
-        position:absolute;
+        position:fixed;
+        width:100%;
+        height:100%;
         z-index:10;
-        opacity: 0.94;
-        background-color:rgb(186, 195, 204);
+        background-color:rgba(126, 128, 129, 0.233); 
         display:block;
-        width:170px;
+        padding-bottom: 5px;
+        overflow: auto;
+        
       }
+      
       .hideSideBar {
         display: hidden;
-        width: 305px;
       }
+     
+     
     </style>
     <!-- embedded code for fonts -->
     <link
@@ -44,6 +49,7 @@
     <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
     <script>
       tailwind.config = {
+        darkMode:'class',
         theme: {
           extend: {
             colors: {
@@ -52,6 +58,9 @@
               fontColor1: "#2B2B2B",
               fontColor2: "#767676",
               yColor: "#FFB400",
+              darkMain: "#252525d0",
+              darkComponent:"#4b5858",
+              darkYColor:"#53490e" ,
             },
             fontFamily: {
               inter: "Inter",
@@ -66,11 +75,11 @@
       };
     </script>
   </head>
-  <body class="flex bg-mainColor">
+  <body class="flex bg-mainColor dark:bg-darkMain">
     <!-- Left Menu Code -->
-    <section id="leftMenu" class=" defaultSideBar p-[10px] rounded-[10px] ">
+    <section id="leftMenu" class=" defaultSideBar   ">
       <div   
-      class="flex flex-col justify-between bg-white w-full  p-[10px] gap-[25px]    "
+      class="flex flex-col justify-between bg-white dark:bg-darkComponent w-[305px]  p-[10px] gap-[25px]  "
     >
       <!--Profile  -->
      
@@ -106,23 +115,23 @@
         <div
           class="flex  flex-wrap justify-between font-inter font-[400] text-[15px] text-fontColor1"
         >
-          <p class="bg-yColor">Age:</p>
+          <p class=" bg-Ycolor dark:bg-darkYColor dark:bg-darkYColor">Age:</p>
           <p>24</p>
         </div>
         <div
           class="flex flex-wrap justify-between font-inter font-[400] text-[15px] text-fontColor1"
         >
-          <p class="bg-yColor">Residence:</p>
+          <p class=" bg-Ycolor dark:bg-darkYColor">Residence:</p>
           <p>BD</p>
         </div>
         <div class="flex flex-wrap justify-between font-inter font-[400] text-[15px]">
-          <p class="bg-yColor text-fontColor1">Freelance:</p>
+          <p class=" bg-Ycolor dark:bg-darkYColor text-fontColor1">Freelance:</p>
           <p class="text-[#7EB942]">Available</p>
         </div>
         <div
           class="flex flex-wrap justify-between font-inter font-[400] text-[15px] text-fontColor1"
         >
-          <p class="bg-yColor">Address:</p>
+          <p class=" bg-Ycolor dark:bg-darkYColor">Address:</p>
           <p>Dhaka,Bangladesh</p>
         </div>
       </div>
@@ -144,7 +153,7 @@
           <div
             class="w-full h-[6px] border border-solid border-[0.5px] border-yColor rounded-[5px]"
           >
-            <div class="w-[99%] h-[2px] m-[1px] bg-yColor"></div>
+            <div class="w-[99%] h-[2px] m-[1px]  bg-Ycolor dark:bg-darkYColor"></div>
           </div>
         </div>
         <div class="flex flex-col">
@@ -157,7 +166,7 @@
           <div
             class="w-full h-[6px] border border-solid border-[0.5px] border-yColor rounded-[5px]"
           >
-            <div class="w-[79%] h-[2px] m-[1px] bg-yColor"></div>
+            <div class="w-[79%] h-[2px] m-[1px]  bg-Ycolor dark:bg-darkYColor"></div>
           </div>
         </div>
         <div class="flex flex-col">
@@ -170,7 +179,7 @@
           <div
             class="w-full h-[6px] border border-solid border-[0.5px] border-yColor rounded-[5px]"
           >
-            <div class="w-[79%] h-[2px] m-[1px] bg-yColor"></div>
+            <div class="w-[79%] h-[2px] m-[1px]  bg-Ycolor dark:bg-darkYColor"></div>
           </div>
         </div>
       </div>
@@ -193,7 +202,7 @@
           <div
             class="w-full h-[6px] border border-solid border-[0.5px] border-yColor rounded-[5px]"
           >
-            <div class="w-[89%] h-[2px] m-[1px] bg-yColor"></div>
+            <div class="w-[89%] h-[2px] m-[1px]  bg-Ycolor dark:bg-darkYColor"></div>
           </div>
         </div>
         <div class="flex flex-col">
@@ -206,7 +215,7 @@
           <div
             class="w-full h-[6px] border border-solid border-[0.5px] border-yColor rounded-[5px]"
           >
-            <div class="w-[84%] h-[2px] m-[1px] bg-yColor"></div>
+            <div class="w-[84%] h-[2px] m-[1px]  bg-Ycolor dark:bg-darkYColor"></div>
           </div>
         </div>
         <div class="flex flex-col">
@@ -219,7 +228,7 @@
           <div
             class="w-full h-[6px] border border-solid border-[0.5px] border-yColor rounded-[5px]"
           >
-            <div class="w-[79%] h-[2px] m-[1px] bg-yColor"></div>
+            <div class="w-[79%] h-[2px] m-[1px]  bg-Ycolor dark:bg-darkYColor"></div>
           </div>
         </div>
         <div class="flex flex-col">
@@ -232,7 +241,7 @@
           <div
             class="w-full h-[6px] border border-solid border-[0.5px] border-yColor rounded-[5px]"
           >
-            <div class="w-[74%] h-[2px] m-[1px] bg-yColor"></div>
+            <div class="w-[74%] h-[2px] m-[1px]  bg-Ycolor dark:bg-darkYColor"></div>
           </div>
         </div>
         <div class="flex flex-col">
@@ -245,7 +254,7 @@
           <div
             class="w-full h-[6px] border border-solid border-[0.5px] border-yColor rounded-[5px]"
           >
-            <div class="w-[84%] h-[2px] m-[1px] bg-yColor"></div>
+            <div class="w-[84%] h-[2px] m-[1px]  bg-Ycolor dark:bg-darkYColor"></div>
           </div>
         </div>
       </div>
@@ -285,7 +294,7 @@
       <!-- Button -->
       <button
         id="button/cv2"
-        class="flex justify-center items-center gap-[8px]  w-[98%] h-[40px] my-[4px]  bg-yColor  hover:animate-bounce hover:transition-transform hover:justify-around hover:bg-gradient-to-r from-yColor to-mainColor"
+        class="flex justify-center items-center gap-[8px]  w-[98%] h-[40px] my-[4px]   bg-Ycolor dark:bg-darkYColor  hover:animate-bounce hover:transition-transform hover:justify-around hover:bg-gradient-to-r from-yColor to-mainColor"
       >
         <p class=" font-inter font-[600] text-[14px] text-fontColor1 ">
           DOWNLOAD CV
@@ -304,7 +313,7 @@
       <!-- Main menu code -->
       <div
         id="mainMenu"
-        class="flex justify-between  px-[10px] py-[30px] bg-white max-[450px]:flex-wrap "
+        class="flex justify-between  px-[10px] py-[30px] bg-white  dark:bg-darkComponent max-[450px]:flex-wrap "
       >
         <div class="flex flex-col basis-2/3 gap-[18px] justify-center  max-[450px]:order-2 max-[450px]:grow">
           <div
@@ -312,7 +321,7 @@
           >
             <p class="text-fontColor1">I'm Sushil Adhikari</p>
             <div class="flex gap-[5px] max-[1054px]:flex-wrap">
-              <p class="text-yColor">Front-end</p>
+              <p class="text-yColor dark:text-darkYColor">Front-end</p>
               <p class="text-fontColor1">Developer</p>
             </div>
           </div>
@@ -325,7 +334,7 @@
           </p>
           <button
             id="button/hire"
-            class="flex justify-center items-center gap-[10px] bg-yColor w-[154px] h-[51px] mt-[7px]   hover:justify-around hover:transition-transform  hover:bg-gradient-to-r from-yColor to-mainColor"
+            class="flex justify-center items-center gap-[10px]  bg-Ycolor dark:bg-darkYColor w-[154px] h-[51px] mt-[7px]   hover:justify-around hover:transition-transform  hover:bg-gradient-to-r from-yColor to-mainColor"
           >
             <p class="font-inter font-[600] text-[14px] text-fontColor1  ">
               HIRE ME
@@ -376,7 +385,7 @@
         <div
           class="grid grid-cols-3 gap-[20px] max-[1150px]:grid-cols-2 max-[865px]:grid-cols-1"
         >
-          <div class="flex flex-col items-center gap-[15px] py-[35px] bg-white">
+          <div class="flex flex-col items-center gap-[15px] py-[35px] bg-white dark:bg-darkComponent">
             <img class="mb-[15px]" src="/images/coding.png" />
             <h4
               class="font-inter font-[500] text-[18px] text-fontColor1 text-center"
@@ -389,7 +398,7 @@
               Blog, E-commerce
             </p>
           </div>
-          <div class="flex flex-col items-center gap-[15px] py-[35px] bg-white">
+          <div class="flex flex-col items-center gap-[15px] py-[35px] bg-white dark:bg-darkComponent">
             <img class="mb-[15px]" src="/images/computer.png" />
             <h4
               class="font-inter font-[500] text-[18px] text-fontColor1 text-center"
@@ -402,7 +411,7 @@
               Mobile App, Web Design
             </p>
           </div>
-          <div class="flex flex-col items-center gap-[15px] py-[30px] bg-white">
+          <div class="flex flex-col items-center gap-[15px] py-[30px] bg-white dark:bg-darkComponent">
             <img class="mb-[15px]" src="/images/Microphone.png" />
             <h4
               class="font-inter font-[500] text-[18px] text-fontColor1 text-center"
@@ -415,7 +424,7 @@
               Voice Over, Beat Making
             </p>
           </div>
-          <div class="flex flex-col items-center gap-[15px] py-[35px] bg-white">
+          <div class="flex flex-col items-center gap-[15px] py-[35px] bg-white dark:bg-darkComponent">
             <img class="mb-[15px]" src="/images/game-development.png" />
             <h4
               class="font-inter font-[500] text-[18px] text-fontColor1 text-center"
@@ -428,7 +437,7 @@
               Character Design, Props & Object
             </p>
           </div>
-          <div class="flex flex-col items-center gap-[15px] py-[30px] bg-white">
+          <div class="flex flex-col items-center gap-[15px] py-[30px] bg-white dark:bg-darkComponent">
             <img class="mb-[15px]" src="/images/photograpy.png" />
             <h4 class="font-inter font-[500] text-[18px] text-fontColor1">
               Photograpy
@@ -439,7 +448,7 @@
               Protrait, Product Photograpy
             </p>
           </div>
-          <div class="flex flex-col items-center gap-[15px] py-[35px] bg-white">
+          <div class="flex flex-col items-center gap-[15px] py-[35px] bg-white dark:bg-darkComponent">
             <h4 class="font-inter font-[500] text-[18px] text-fontColor1">
               Advertising
             </h4>
@@ -477,7 +486,7 @@
         <div
           class="grid grid-cols-3 gap-[20px] max-[1150px]:grid-cols-2 max-[865px]:grid-cols-1"
         >
-          <div class="flex flex-col items-center py-[25px] bg-white">
+          <div class="flex flex-col items-center py-[25px] bg-white dark:bg-darkComponent">
             <h3 class="font-inter font-[600] text-[24px] text-fontColor1">
               Silver
             </h3>
@@ -538,9 +547,9 @@
               </button></a
             >
           </div>
-          <div class="flex flex-col items-center pb-[25px] bg-white">
+          <div class="flex flex-col items-center pb-[25px] bg-white dark:bg-darkComponent">
             <p
-              class="font-inter font-[400] text-[15px] text-fontColor1 w-full text-center bg-yColor"
+              class="font-inter font-[400] text-[15px] text-fontColor1 w-full text-center  bg-Ycolor dark:bg-darkYColor"
             >
               Most Popular
             </p>
@@ -598,13 +607,13 @@
             </div>
             <a
               ><button
-                class="font-inter font-[700] text-[14px] text-fontColor1 w-[169px] h-[38px] rounded-[30px] bg-yColor hover:underline"
+                class="font-inter font-[700] text-[14px] text-fontColor1 w-[169px] h-[38px] rounded-[30px]  bg-Ycolor dark:bg-darkYColor hover:underline"
               >
                 ORDER NOW
               </button></a
             >
           </div>
-          <div class="flex flex-col items-center py-[25px] bg-white">
+          <div class="flex flex-col items-center py-[25px] bg-white dark:bg-darkComponent">
             <h3 class="font-inter font-[600] text-[24px] text-fontColor1">
               Diamond
             </h3>
@@ -685,7 +694,7 @@
         <div
           class="grid grid-cols-3 gap-[20px] max-[1150px]:grid-cols-2 max-[865px]:grid-cols-1"
         >
-          <div class="flex flex-col gap-[17px] p-[25px] bg-white">
+          <div class="flex flex-col gap-[17px] p-[25px] bg-white dark:bg-darkComponent">
             <div class="flex gap-[10px]">
               <img src="/images/star.png" />
               <img src="/images/star.png" />
@@ -714,7 +723,7 @@
               </div>
             </div>
           </div>
-          <div class="flex flex-col gap-[17px] p-[25px] bg-white">
+          <div class="flex flex-col gap-[17px] p-[25px] bg-white dark:bg-darkComponent">
             <div class="flex gap-[10px]">
               <img src="/images/star.png" />
               <img src="/images/star.png" />
@@ -743,7 +752,7 @@
               </div>
             </div>
           </div>
-          <div class="flex flex-col gap-[17px] p-[25px] bg-white">
+          <div class="flex flex-col gap-[17px] p-[25px] bg-white dark:bg-darkComponent">
             <div class="flex gap-[10px]">
               <img src="/images/star.png" />
               <img src="/images/star.png" />
@@ -789,7 +798,7 @@
             sint. Velit officia consequat duis enim velit mollit. lorem ipsum
           </p>
         </div>
-        <div class="flex flex-col py-[30px] px-[30px] bg-white">
+        <div class="flex flex-col py-[30px] px-[30px] bg-white dark:bg-darkComponent">
           <div
             class="flex justify-between border-b-[1.5px] gap-[10px] border-borderColor py-[15px]"
           >
@@ -804,7 +813,7 @@
                   Student
                 </p>
                 <p
-                  class="flex justify-center items-center font-inter font-[400] text-[10px] text-white bg-yColor px-[5px]"
+                  class="flex justify-center items-center font-inter font-[400] text-[10px] text-white  bg-Ycolor dark:bg-darkYColor px-[5px]"
                 >
                   Jan 2016-Dec 2021
                 </p>
@@ -841,7 +850,7 @@
                   Student
                 </p>
                 <p
-                  class="flex justify-center items-center font-inter font-[400] text-[10px] text-white bg-yColor px-[5px]"
+                  class="flex justify-center items-center font-inter font-[400] text-[10px] text-white  bg-Ycolor dark:bg-darkYColor px-[5px]"
                 >
                   Jan 2016-Dec 2021
                 </p>
@@ -878,7 +887,7 @@
                   Student
                 </p>
                 <p
-                  class="flex justify-center items-center font-inter font-[400] text-[10px] text-white bg-yColor px-[5px]"
+                  class="flex justify-center items-center font-inter font-[400] text-[10px] text-white  bg-Ycolor dark:bg-darkYColor px-[5px]"
                 >
                   Jan 2016-Dec 2021
                 </p>
@@ -919,7 +928,7 @@
             sint. Velit officia consequat duis enim velit mollit. lorem ipsum
           </p>
         </div>
-        <div class="flex flex-col py-[30px] px-[30px] bg-white">
+        <div class="flex flex-col py-[30px] px-[30px] bg-white dark:bg-darkComponent">
           <div
             class="flex justify-between border-b-[1.5px] border-borderColor gap-[10px] py-[15px]"
           >
@@ -934,7 +943,7 @@
                   Student
                 </p>
                 <p
-                  class="flex justify-center items-center font-inter font-[400] text-[10px] text-white bg-yColor px-[5px]"
+                  class="flex justify-center items-center font-inter font-[400] text-[10px] text-white  bg-Ycolor dark:bg-darkYColor px-[5px]"
                 >
                   Jan 2016-Dec 2021
                 </p>
@@ -973,7 +982,7 @@
                   Student
                 </p>
                 <p
-                  class="flex justify-center items-center font-inter font-[400] text-[10px] text-white bg-yColor px-[5px]"
+                  class="flex justify-center items-center font-inter font-[400] text-[10px] text-white  bg-Ycolor dark:bg-darkYColor px-[5px]"
                 >
                   Jan 2016-Dec 2021
                 </p>
@@ -1010,7 +1019,7 @@
                   Student
                 </p>
                 <p
-                  class="flex justify-center items-center font-inter font-[400] text-[10px] text-white bg-yColor px-[5px]"
+                  class="flex justify-center items-center font-inter font-[400] text-[10px] text-white  bg-Ycolor dark:bg-darkYColor px-[5px]"
                 >
                   Jan 2016-Dec 2021
                 </p>
@@ -1066,7 +1075,7 @@
           <div class="relative">
             <img class="w-full" src="/images/Image1.png" />
             <div
-              class="flex items-center justify-center absolute top-0 left-0 bg-yColor w-full h-full font-inter font-[500] text-[70px] opacity-0 hover:opacity-80"
+              class="flex items-center justify-center absolute top-0 left-0  bg-Ycolor dark:bg-darkYColor w-full h-full font-inter font-[500] text-[70px] opacity-0 hover:opacity-80"
             >
               <p>+</p>
             </div>
@@ -1074,7 +1083,7 @@
           <div class="relative">
             <img class="w-full" src="/images/Image2.png" />
             <div
-              class="flex items-center justify-center absolute top-0 left-0 bg-yColor w-full h-full font-inter font-[500] text-[70px] opacity-0 hover:opacity-80"
+              class="flex items-center justify-center absolute top-0 left-0  bg-Ycolor dark:bg-darkYColor w-full h-full font-inter font-[500] text-[70px] opacity-0 hover:opacity-80"
             >
               <p>+</p>
             </div>
@@ -1082,7 +1091,7 @@
           <div class="relative">
             <img class="w-full" src="/images/Image3.png" />
             <div
-              class="flex items-center justify-center absolute top-0 left-0 bg-yColor w-full h-full font-inter font-[500] text-[70px] opacity-0 hover:opacity-80"
+              class="flex items-center justify-center absolute top-0 left-0  bg-Ycolor dark:bg-darkYColor w-full h-full font-inter font-[500] text-[70px] opacity-0 hover:opacity-80"
             >
               <p>+</p>
             </div>
@@ -1090,7 +1099,7 @@
           <div class="relative">
             <img class="w-full" src="/images/Image4.png" />
             <div
-              class="flex items-center justify-center absolute top-0 left-0 bg-yColor w-full h-full font-inter font-[500] text-[70px] opacity-0 hover:opacity-80"
+              class="flex items-center justify-center absolute top-0 left-0  bg-Ycolor dark:bg-darkYColor w-full h-full font-inter font-[500] text-[70px] opacity-0 hover:opacity-80"
             >
               <p>+</p>
             </div>
@@ -1098,7 +1107,7 @@
           <div class="relative">
             <img class="w-full" src="/images/Image5.png" />
             <div
-              class="flex items-center justify-center absolute top-0 left-0 bg-yColor w-full h-full font-inter font-[500] text-[70px] opacity-0 hover:opacity-80"
+              class="flex items-center justify-center absolute top-0 left-0  bg-Ycolor dark:bg-darkYColor w-full h-full font-inter font-[500] text-[70px] opacity-0 hover:opacity-80"
             >
               <p>+</p>
             </div>
@@ -1106,7 +1115,7 @@
           <div class="relative">
             <img class="w-full" src="/images/Image6.png" />
             <div
-              class="flex items-center justify-center absolute top-0 left-0 bg-yColor w-full h-full font-inter font-[500] text-[70px] opacity-0 hover:opacity-80"
+              class="flex items-center justify-center absolute top-0 left-0  bg-Ycolor dark:bg-darkYColor w-full h-full font-inter font-[500] text-[70px] opacity-0 hover:opacity-80"
             >
               <p>+</p>
             </div>
@@ -1114,7 +1123,7 @@
           <div class="relative">
             <img class="w-full" src="/images/Image7.png" />
             <div
-              class="flex items-center justify-center absolute top-0 left-0 bg-yColor w-full h-full font-inter font-[500] text-[70px] opacity-0 hover:opacity-80"
+              class="flex items-center justify-center absolute top-0 left-0  bg-Ycolor dark:bg-darkYColor w-full h-full font-inter font-[500] text-[70px] opacity-0 hover:opacity-80"
             >
               <p>+</p>
             </div>
@@ -1122,7 +1131,7 @@
           <div class="relative">
             <img class="w-full" src="/images/Image8.png" />
             <div
-              class="flex items-center justify-center absolute top-0 left-0 bg-yColor w-full h-full font-inter font-[500] text-[70px] opacity-0 hover:opacity-80"
+              class="flex items-center justify-center absolute top-0 left-0  bg-Ycolor dark:bg-darkYColor w-full h-full font-inter font-[500] text-[70px] opacity-0 hover:opacity-80"
             >
               <p>+</p>
             </div>
@@ -1130,7 +1139,7 @@
           <div class="relative">
             <img class="w-full" src="/images/Image9.png" />
             <div
-              class="flex items-center justify-center absolute top-0 left-0 bg-yColor w-full h-full font-inter font-[500] text-[70px] opacity-0 hover:opacity-80"
+              class="flex items-center justify-center absolute top-0 left-0  bg-Ycolor dark:bg-darkYColor w-full h-full font-inter font-[500] text-[70px] opacity-0 hover:opacity-80"
             >
               <p>+</p>
             </div>
@@ -1157,7 +1166,7 @@
         >
           <div>
             <img class="w-full" src="images/Image1.png" />
-            <div class="flex flex-col p-[25px] gap-[9px] bg-white">
+            <div class="flex flex-col p-[25px] gap-[9px] bg-white dark:bg-darkComponent">
               <h4 class="font-inter font-[500] text-[18px] text-fontColor1">
                 How To Make Templates
               </h4>
@@ -1178,7 +1187,7 @@
           </div>
           <div>
             <img class="w-full" src="images/Image2.png" />
-            <div class="flex flex-col p-[25px] gap-[9px] bg-white">
+            <div class="flex flex-col p-[25px] gap-[9px] bg-white dark:bg-darkComponent">
               <h4 class="font-inter font-[500] text-[18px] text-fontColor1">
                 Make Business Card
               </h4>
@@ -1199,7 +1208,7 @@
           </div>
           <div>
             <img class="w-full" src="images/Image3.png" />
-            <div class="flex flex-col p-[25px] gap-[9px] bg-white">
+            <div class="flex flex-col p-[25px] gap-[9px] bg-white dark:bg-darkComponent">
               <h4 class="font-inter font-[500] text-[18px] text-fontColor1">
                 How To Make Flyer Design
               </h4>
@@ -1233,7 +1242,7 @@
           </h2>
           <form
             id="infoForm"
-            class="flex flex-col gap-[8px] p-[25px] w-full bg-white"
+            class="flex flex-col gap-[8px] p-[25px] w-full bg-white dark:bg-darkComponent"
           >
             <label
               for="full_name"
@@ -1261,7 +1270,7 @@
             <textarea id="message" class="h-[283px] bg-mainColor"></textarea>
             <button
               id="send_message"
-              class="font-inter font-[600] font-[14px] text-fontColor1 mt-[17px] w-[159px] h-[35px] my-auto bg-yColor"
+              class="font-inter font-[600] font-[14px] text-fontColor1 mt-[17px] w-[159px] h-[35px] my-auto  bg-Ycolor dark:bg-darkYColor"
             >
               SEND MESSAGE
             </button>
@@ -1277,10 +1286,10 @@
             Contact Information
           </h2>
           <div
-            class="flex flex-col gap-[30px] p-[25px_25px_17px] bg-white w-full"
+            class="flex flex-col gap-[30px] p-[25px_25px_17px] bg-white dark:bg-darkComponent w-full"
           >
             <div
-              class="flex items-center justify-center rounded-[30px] w-[40px] h-[40px] self-center bg-yColor"
+              class="flex items-center justify-center rounded-[30px] w-[40px] h-[40px] self-center  bg-Ycolor dark:bg-darkYColor"
             >
               <img src="/images/location.png" />
             </div>
@@ -1312,10 +1321,10 @@
             </div>
           </div>
           <div
-            class="flex flex-col gap-[30px] p-[25px_25px_17px] bg-white w-full"
+            class="flex flex-col gap-[30px] p-[25px_25px_17px] bg-white dark:bg-darkComponent w-full"
           >
             <div
-              class="flex items-center justify-center rounded-[30px] w-[40px] h-[40px] self-center bg-yColor"
+              class="flex items-center justify-center rounded-[30px] w-[40px] h-[40px] self-center  bg-Ycolor dark:bg-darkYColor"
             >
               <img src="/images/mail.png" />
             </div>
@@ -1347,10 +1356,10 @@
             </div>
           </div>
           <div
-            class="flex flex-col gap-[30px] p-[25px_25px_17px] bg-white w-full"
+            class="flex flex-col gap-[30px] p-[25px_25px_17px] bg-white dark:bg-darkComponent w-full"
           >
             <div
-              class="flex items-center justify-center rounded-[30px] w-[40px] h-[40px] self-center bg-yColor"
+              class="flex items-center justify-center rounded-[30px] w-[40px] h-[40px] self-center  bg-Ycolor dark:bg-darkYColor"
             >
               <img src="/images/Mobile.png" />
             </div>
@@ -1406,7 +1415,7 @@
       <!-- Footer code -->
       <div
         id="footer"
-        class="w-full font-inter font-[400] text-[15px] text-fontColor2 text-center bg-white py-[18px]"
+        class="w-full font-inter font-[400] text-[15px] text-fontColor2 text-center bg-white dark:bg-darkComponent py-[18px]"
       >
         <p>2021 All Rights Reserved.Ojjomedia</p>
       </div>
@@ -1415,46 +1424,48 @@
     <!-- Right Menu Code Start -->
     <section
       id="rightMenu"
-      class="flex flex-col items-center gap-[80px] w-[80px] h-full pt-[52px] fixed top-0 right-0 bg-white max-[767px]:w-[60px]"
+      class="flex flex-col items-center gap-[80px] w-[80px] h-full pt-[52px] fixed top-0 right-0 bg-white dark:bg-darkComponent z-20 max-[767px]:w-[60px]"
     >
       <div class="flex flex-col items-center gap-[20px]">
-        <a
-        ><button><img src="/images/Vector2.png" /></button
-      ></a>
+        <button id="theme" onclick="toggleTheme()" ><img src="/images/Vector2.png" /></button>
         <button class="hidden max-[767px]:block" onclick="toggle()">
-          <img class="w-[40px] h-[40px]" src="/images/menu.png">
+          <img id="menuCloseImg" class=" w-[40px] h-[40px]" src="/images/menu.png">
+          
         </button>
       </div>
       
       <div class="flex flex-col items-center gap-[35px]">
-        <a
-          ><button><img src="/images/Home.png" /></button
+        <a href="#mainMenu"
+          ><button id="homeButton"><img src="/images/Home.png" /></button
         ></a>
-        <a
+        <a href="#myServices"
           class="flex justify-center items-center w-[40px] h-[40px] rounded-[25px] bg-borderColor"
-          ><button><img src="/images/Vector3.png" /></button
+          ><button id="serviceButton"><img src="/images/Vector3.png" /></button
         ></a>
-        <a
+        <a href="#education"
           class="flex justify-center items-center w-[40px] h-[40px] rounded-[25px] bg-borderColor"
-          ><button><img src="/images/Vector4.png" /></button
+          ><button id="educationButton"><img src="/images/Vector4.png" /></button
         ></a>
-        <a
+        <a href="#workHistory"
           class="flex justify-center items-center w-[40px] h-[40px] rounded-[25px] bg-borderColor"
-          ><button><img src="/images/Vector5.png" /></button
+          ><button id="workButton"><img src="/images/Vector5.png" /></button
         ></a>
-        <a
+        <a href="#portfolio"
           class="flex justify-center items-center w-[40px] h-[40px] rounded-[25px] bg-borderColor"
-          ><button><img src="/images/Vector6.png" /></button
+          ><button id="portfolioButton"><img src="/images/Vector6.png" /></button
         ></a>
-        <a
-          class="flex justify-center items-center w-[40px] h-[40px] rounded-[25px] bg-borderColor"
-          ><button><img src="/images/Vector7.png" /></button
-        ></a>
+        <a href="#infoContact"
+         class="flex justify-center items-center w-[40px] h-[40px] rounded-[25px] bg-borderColor">
+          <button id="infoButton"  ><img src="/images/Vector7.png" /></button>
+        </a>
+        
       </div>
     </section>
     <script> 
        const leftMenu=document.getElementById("leftMenu");
-       const middleMenu=document.getElementById("middleMenu");
+       const menuCloseImg=document.getElementById("menuCloseImg");
+       
+       
       function resetting()
       {
         
@@ -1464,7 +1475,8 @@
             leftMenu.classList.add('defaultSideBar');
             leftMenu.classList.remove('showSideBar');
             leftMenu.classList.remove('hideSideBar');
-            
+            menuCloseImg.src="/images/menu.png";
+           
         }
       }
       
@@ -1475,6 +1487,7 @@
             leftMenu.classList.remove('defaultSideBar');
             leftMenu.classList.add('showSideBar');
             leftMenu.classList.remove('hideSideBar');
+            menuCloseImg.src="/images/close.png";
           }
 
          else 
@@ -1483,18 +1496,25 @@
             leftMenu.classList.add('hideSideBar');
             leftMenu.classList.remove('showSideBar');
             leftMenu.classList.add('defaultSideBar');
-            
+            menuCloseImg.src="/images/menu.png";
           }
          }
-         function clickToggle()
+         
+         function toggleTheme()
          {
-           if(leftMenu.classList.contains('showSideBar'))
+          document.documentElement.classList.toggle('dark');
+          
+         }
+
+         leftMenu.addEventListener('click', (clickToggle)=>{
+          if(clickToggle.target==leftMenu && leftMenu.classList.contains('showSideBar'))
            {
             toggle();
            }
-         }
-         middleMenu.addEventListener('click', clickToggle);
+
+         });
          window.addEventListener('resize',resetting);
+         
          
     </script>
   </body>
