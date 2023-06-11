@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sushil Adhikari</title>
-    <!-- Resetting all element in html -->
+    
     <style>
       * {
         margin: 0;
@@ -79,10 +79,6 @@
               roboto: "Roboto",
             },
           },
-          screens: {
-            //  Add your custom breakpoint here
-            custom: "900px",
-          },
         },
       };
     </script>
@@ -125,25 +121,25 @@
           class="flex flex-col gap-[10px] pb-[25px] border-b border-1.5px border-borderColor border-solid"
         >
           <div
-            class="flex  flex-wrap justify-between font-inter font-[400] text-[15px] text-fontColor1"
+            class="flex  flex-wrap justify-between font-inter font-[400]  text-[15px] text-fontColor1"
           >
-            <p class=" bg-yellowColor dark:bg-darkYColor ">Age:</p>
+            <p class=" px-[5px] bg-yellowColor dark:bg-darkYColor ">Age:</p>
             <p>24</p>
           </div>
           <div
             class="flex flex-wrap justify-between font-inter font-[400] text-[15px] text-fontColor1"
           >
-            <p class=" bg-yellowColor dark:bg-darkYColor">Residence:</p>
+            <p class=" px-[5px] bg-yellowColor dark:bg-darkYColor">Residence:</p>
             <p>BD</p>
           </div>
           <div class="flex flex-wrap justify-between font-inter font-[400] text-[15px]">
-            <p class=" bg-yellowColor dark:bg-darkYColor text-fontColor1">Freelance:</p>
+            <p class="  px-[5px] bg-yellowColor dark:bg-darkYColor text-fontColor1">Freelance:</p>
             <p class="text-[#7EB942]">Available</p>
           </div>
           <div
             class="flex flex-wrap justify-between font-inter font-[400] text-[15px] text-fontColor1"
           >
-            <p class=" bg-yellowColor dark:bg-darkYColor">Address:</p>
+            <p class="  px-[5px] bg-yellowColor dark:bg-darkYColor">Address:</p>
             <p>Dhaka,Bangladesh</p>
           </div>
         </div>
@@ -1450,28 +1446,28 @@
       </div>
       
       <div class="flex flex-col items-center gap-[35px]">
-        <a href="#mainMenu"
-          ><button id="homeButton"><img src="/images/Home.png" /></button
+        <a href="#mainMenu" id="homeButton" class="flex justify-center items-center w-[40px] h-[40px] rounded-[25px] bg-borderColor"
+          ><button ><img src="/images/Home.png" /></button
         ></a>
-        <a href="#myServices"
+        <a href="#myServices" id="serviceButton"
           class="flex justify-center items-center w-[40px] h-[40px] rounded-[25px] bg-borderColor"
-          ><button id="serviceButton"><img src="/images/Vector3.png" /></button
+          ><button ><img src="/images/Vector3.png" /></button
         ></a>
-        <a href="#education"
+        <a href="#education"  id="educationButton"
           class="flex justify-center items-center w-[40px] h-[40px] rounded-[25px] bg-borderColor"
-          ><button id="educationButton"><img src="/images/Vector4.png" /></button
+          ><button><img src="/images/Vector4.png" /></button
         ></a>
-        <a href="#workHistory"
+        <a href="#workHistory" id="workButton"
           class="flex justify-center items-center w-[40px] h-[40px] rounded-[25px] bg-borderColor"
-          ><button id="workButton"><img src="/images/Vector5.png" /></button
+          ><button ><img src="/images/Vector5.png" /></button
         ></a>
-        <a href="#portfolio"
+        <a href="#portfolio" id="portfolioButton"
           class="flex justify-center items-center w-[40px] h-[40px] rounded-[25px] bg-borderColor"
-          ><button id="portfolioButton"><img src="/images/Vector6.png" /></button
+          ><button ><img src="/images/Vector6.png" /></button
         ></a>
-        <a href="#infoContact"
+        <a href="#infoContact" id="infoButton"
          class="flex justify-center items-center w-[40px] h-[40px] rounded-[25px] bg-borderColor">
-          <button id="infoButton"  ><img src="/images/Vector7.png" /></button>
+          <button   ><img src="/images/Vector7.png" /></button>
         </a>
         
       </div>
@@ -1524,7 +1520,6 @@
           {
              leftMenu.classList.add('sticky');
              leftMenu.style.top = `-${leftMenuHeight-windowInnerHeight}px`;
-             console.log(screenWidth);
           }
           else
           {
@@ -1532,10 +1527,36 @@
             leftMenu.style.top = 0;
           } 
          
-         
-          console.log(leftMenu.classList);
          }
+         function hightlightButton()
+         {
+          
+          const buttons = document.querySelectorAll('[id^="Button"]');
          
+          buttons.forEach(function(button){
+          
+            if(viewPort(button))
+            {
+              button.classList.remove('bg-borderColor');
+              button.classList.add('bg-yellowColor');
+              
+            }
+            else 
+            {
+              button.classList.add('bg-borderColor');
+              button.classList.remove('bg-yellowColor');
+            }
+          });
+
+         }
+         function viewPort(button)
+         {
+           const href=button.getAttribute("href");
+           const section= href.substring(1).getBoundingClientRect();
+           return (section.bottom <=(window.innerHeight|| document.documentElement.clientHeight) &&
+                  section.right  <=(window.innerWidth|| document.documentElement.clientWidth));
+           
+         }
          function toggleTheme()
          {
           document.documentElement.classList.toggle('dark');
@@ -1551,6 +1572,7 @@
          });
          window.addEventListener('resize',resetting);
          window.addEventListener('scroll', makeLeftBarSticky);
+         window.addEventListener('scroll',hightlightButton);
          
          
     </script>
