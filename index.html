@@ -14,7 +14,11 @@
       }
       .defaultSideBar{
         width:305px;
+<<<<<<< HEAD
         height:100%;
+=======
+        height:fit-content;
+>>>>>>> portfolio-page
         @media screen and (max-width: 767px) {
          display: none;
         }
@@ -30,7 +34,20 @@
         display:block;
         padding-bottom: 5px;
         overflow: auto;
+<<<<<<< HEAD
+=======
+    
+>>>>>>> portfolio-page
       }
+       .sideBarSticky { 
+        position:sticky;
+        width:305px;
+        height:fit-content;
+        @media screen and (max-width: 767px) {
+           display: none;
+        }
+      
+      } 
       
       .hideSideBar {
         display: hidden;
@@ -77,233 +94,238 @@
       };
     </script>
   </head>
-  <body class="flex bg-mainColor dark:bg-darkMain">
+  <body class="flex bg-mainColor dark:bg-darkMain ">
     <!-- Left Menu Code -->
-    <section id="leftMenu" class=" defaultSideBar   ">
+    <section id="leftMenu" class=" defaultSideBar ">
       <div   
-      class="flex flex-col justify-between bg-white dark:bg-darkComponent w-[305px]  p-[10px] gap-[25px]  "
-    >
-      <!--Profile  -->
-     
-      <div
-        id="profile"
-        class=" flex flex-col items-center gap-[15px] pb-[25px]  border-b border-1.5px border-borderColor border-solid "
-      >
-      <div class="relative">
-        <img class="  w-[150px] h-[150px] " src="/images/Profile.jpg" />
-        <img class="w-[16px] h-[16px] absolute bottom-[7%] right-[7%] animate-bounce  " src="/images/Available.png"/>
-      </div>
-        
-        <h4 class="mt-[16px] font-inter font-[500] text-[18px] text-fontColor1">
-          Sushil Adhikari
-        </h4>
-        <p class="font-inter font-[400] text-[15px] text-fontColor2">
-          Front End Developer
-        </p>
-        <div class="flex gap-[10px] flex-wrap  " id="socialMediaIcons">
-          <img src="/images/Facebook.png" />
-          <img src="/images/Instagram.png" />
-          <img src="/images/Twitter.png" />
-          <img src="/images/Linkeding.png" />
-          <img src="/images/Youtube.png" />
-          <img src="/images/Dribbble.png" />
-        </div>
-      </div>
-      <!-- About -->
-      <div
-        id="about"
-        class="flex flex-col gap-[10px] pb-[25px] border-b border-1.5px border-borderColor border-solid"
-      >
-        <div
-          class="flex  flex-wrap justify-between font-inter font-[400] text-[15px] text-fontColor1"
+         class="flex-col justify-between bg-white dark:bg-darkComponent w-[305px]  p-[10px] gap-[25px]  "
         >
+        <!--Profile  -->
+     
+        <div
+          id="profile"
+          class=" flex flex-col items-center gap-[15px] pb-[25px]  border-b border-1.5px border-borderColor border-solid "
+        >
+<<<<<<< HEAD
         <p class=" bg-yellowColor dark:bg-darkYColor ">Age:</p>
         <p>24</p>
+=======
+        <div class="relative">
+          <img class="  w-[150px] h-[150px] " src="/images/Profile.jpg" />
+          <img class="w-[16px] h-[16px] absolute bottom-[7%] right-[7%] animate-bounce  " src="/images/Available.png"/>
+>>>>>>> portfolio-page
         </div>
+          
+          <h4 class="mt-[16px] font-inter font-[500] text-[18px] text-fontColor1">
+            Sushil Adhikari
+          </h4>
+          <p class="font-inter font-[400] text-[15px] text-fontColor2">
+            Front End Developer
+          </p>
+          <div class="flex gap-[10px] flex-wrap  " id="socialMediaIcons">
+            <img src="/images/Facebook.png" />
+            <img src="/images/Instagram.png" />
+            <img src="/images/Twitter.png" />
+            <img src="/images/Linkeding.png" />
+            <img src="/images/Youtube.png" />
+            <img src="/images/Dribbble.png" />
+          </div>
+        </div>
+        <!-- About -->
         <div
-          class="flex flex-wrap justify-between font-inter font-[400] text-[15px] text-fontColor1"
+          id="about"
+          class="flex flex-col gap-[10px] pb-[25px] border-b border-1.5px border-borderColor border-solid"
         >
-          <p class=" bg-yellowColor dark:bg-darkYColor">Residence:</p>
-          <p>BD</p>
+          <div
+            class="flex  flex-wrap justify-between font-inter font-[400] text-[15px] text-fontColor1"
+          >
+            <p class=" bg-yellowColor dark:bg-darkYColor ">Age:</p>
+            <p>24</p>
+          </div>
+          <div
+            class="flex flex-wrap justify-between font-inter font-[400] text-[15px] text-fontColor1"
+          >
+            <p class=" bg-yellowColor dark:bg-darkYColor">Residence:</p>
+            <p>BD</p>
+          </div>
+          <div class="flex flex-wrap justify-between font-inter font-[400] text-[15px]">
+            <p class=" bg-yellowColor dark:bg-darkYColor text-fontColor1">Freelance:</p>
+            <p class="text-[#7EB942]">Available</p>
+          </div>
+          <div
+            class="flex flex-wrap justify-between font-inter font-[400] text-[15px] text-fontColor1"
+          >
+            <p class=" bg-yellowColor dark:bg-darkYColor">Address:</p>
+            <p>Dhaka,Bangladesh</p>
+          </div>
         </div>
-        <div class="flex flex-wrap justify-between font-inter font-[400] text-[15px]">
-          <p class=" bg-yellowColor dark:bg-darkYColor text-fontColor1">Freelance:</p>
-          <p class="text-[#7EB942]">Available</p>
-        </div>
+        <!-- Languages -->
         <div
-          class="flex flex-wrap justify-between font-inter font-[400] text-[15px] text-fontColor1"
+          id="languages"
+          class="flex flex-col gap-[10px] pb-[25px] border-b border-1.5px border-borderColor border-solid"
         >
-          <p class=" bg-yellowColor dark:bg-darkYColor">Address:</p>
-          <p>Dhaka,Bangladesh</p>
-        </div>
-      </div>
-      <!-- Languages -->
-      <div
-        id="languages"
-        class="flex flex-col gap-[10px] pb-[25px] border-b border-1.5px border-borderColor border-solid"
-      >
-        <h4 class="font-inter font-[500] text-[18px] text-fontColor1 mb-[5px]">
-          Languages
-        </h4>
-        <div class="flex flex-col">
-          <div
-            class="flex justify-between font-inter font-[400] text-[15px] text-fontColor2"
-          >
-            <p>Bangla</p>
-            <p>100%</p>
+          <h4 class="font-inter font-[500] text-[18px] text-fontColor1 mb-[5px]">
+            Languages
+          </h4>
+          <div class="flex flex-col">
+            <div
+              class="flex justify-between font-inter font-[400] text-[15px] text-fontColor2"
+            >
+              <p>Bangla</p>
+              <p>100%</p>
+            </div>
+            <div
+              class="w-full h-[6px] border border-solid border-[0.5px] border-yellowColor rounded-[5px]"
+            >
+              <div class="w-[99%] h-[2px] m-[1px]  bg-yellowColor dark:bg-darkYColor"></div>
+            </div>
           </div>
-          <div
-            class="w-full h-[6px] border border-solid border-[0.5px] border-yellowColor rounded-[5px]"
-          >
-            <div class="w-[99%] h-[2px] m-[1px]  bg-yellowColor dark:bg-darkYColor"></div>
+          <div class="flex flex-col">
+            <div
+              class="flex justify-between font-inter font-[400] text-[15px] text-fontColor2"
+            >
+              <p>English</p>
+              <p>80%</p>
+            </div>
+            <div
+              class="w-full h-[6px] border border-solid border-[0.5px] border-yellowColor rounded-[5px]"
+            >
+              <div class="w-[79%] h-[2px] m-[1px]  bg-yellowColor dark:bg-darkYColor"></div>
+            </div>
           </div>
-        </div>
-        <div class="flex flex-col">
-          <div
-            class="flex justify-between font-inter font-[400] text-[15px] text-fontColor2"
-          >
-            <p>English</p>
-            <p>80%</p>
-          </div>
-          <div
-            class="w-full h-[6px] border border-solid border-[0.5px] border-yellowColor rounded-[5px]"
-          >
-            <div class="w-[79%] h-[2px] m-[1px]  bg-yellowColor dark:bg-darkYColor"></div>
-          </div>
-        </div>
-        <div class="flex flex-col">
-          <div
-            class="flex justify-between font-inter font-[400] text-[15px] text-fontColor2"
-          >
-            <p>Spanish</p>
-            <p>60%</p>
-          </div>
-          <div
-            class="w-full h-[6px] border border-solid border-[0.5px] border-yellowColor rounded-[5px]"
-          >
-            <div class="w-[79%] h-[2px] m-[1px]  bg-yellowColor dark:bg-darkYColor"></div>
+          <div class="flex flex-col">
+            <div
+              class="flex justify-between font-inter font-[400] text-[15px] text-fontColor2"
+            >
+              <p>Spanish</p>
+              <p>60%</p>
+            </div>
+            <div
+              class="w-full h-[6px] border border-solid border-[0.5px] border-yellowColor rounded-[5px]"
+            >
+              <div class="w-[79%] h-[2px] m-[1px]  bg-yellowColor dark:bg-darkYColor"></div>
+            </div>
           </div>
         </div>
-      </div>
-      <!-- Skills -->
-      <div
-        id="skills "
-        class="flex flex-col gap-[10px] pb-[25px] border-b border-1.5px border-borderColor border-solid"
-      >
-        <h4 class="font-inter font-[500] text-[18px] text-fontColor1 mb-[5px]">
-          Skills
-        </h4>
+        <!-- Skills -->
+        <div
+          id="skills "
+          class="flex flex-col gap-[10px] pb-[25px] border-b border-1.5px border-borderColor border-solid"
+        >
+          <h4 class="font-inter font-[500] text-[18px] text-fontColor1 mb-[5px]">
+            Skills
+          </h4>
 
-        <div class="flex flex-col">
-          <div
-            class="flex justify-between font-inter font-[400] text-[15px] text-fontColor2"
-          >
-            <p>Html</p>
-            <p>90%</p>
+          <div class="flex flex-col">
+            <div
+              class="flex justify-between font-inter font-[400] text-[15px] text-fontColor2"
+            >
+              <p>Html</p>
+              <p>90%</p>
+            </div>
+            <div
+              class="w-full h-[6px] border border-solid border-[0.5px] border-yellowColor rounded-[5px]"
+            >
+              <div class="w-[89%] h-[2px] m-[1px]  bg-yellowColor dark:bg-darkYColor"></div>
+            </div>
           </div>
-          <div
-            class="w-full h-[6px] border border-solid border-[0.5px] border-yellowColor rounded-[5px]"
-          >
-            <div class="w-[89%] h-[2px] m-[1px]  bg-yellowColor dark:bg-darkYColor"></div>
+          <div class="flex flex-col">
+            <div
+              class="flex justify-between font-inter font-[400] text-[15px] text-fontColor2"
+            >
+              <p>Css</p>
+              <p>85%</p>
+            </div>
+            <div
+              class="w-full h-[6px] border border-solid border-[0.5px] border-yellowColor rounded-[5px]"
+            >
+              <div class="w-[84%] h-[2px] m-[1px]  bg-yellowColor dark:bg-darkYColor"></div>
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <div
+              class="flex justify-between font-inter font-[400] text-[15px] text-fontColor2"
+            >
+              <p>Js</p>
+              <p>80%</p>
+            </div>
+            <div
+              class="w-full h-[6px] border border-solid border-[0.5px] border-yellowColor rounded-[5px]"
+            >
+              <div class="w-[79%] h-[2px] m-[1px]  bg-yellowColor dark:bg-darkYColor"></div>
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <div
+              class="flex justify-between font-inter font-[400] text-[15px] text-fontColor2"
+            >
+              <p>PHP</p>
+              <p>75%</p>
+            </div>
+            <div
+              class="w-full h-[6px] border border-solid border-[0.5px] border-yellowColor rounded-[5px]"
+            >
+              <div class="w-[74%] h-[2px] m-[1px]  bg-yellowColor dark:bg-darkYColor"></div>
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <div
+              class="flex justify-between font-inter font-[400] text-[15px] text-fontColor2"
+            >
+              <p>WordPress</p>
+              <p>85%</p>
+            </div>
+            <div
+              class="w-full h-[6px] border border-solid border-[0.5px] border-yellowColor rounded-[5px]"
+            >
+              <div class="w-[84%] h-[2px] m-[1px]  bg-yellowColor dark:bg-darkYColor"></div>
+            </div>
           </div>
         </div>
-        <div class="flex flex-col">
-          <div
-            class="flex justify-between font-inter font-[400] text-[15px] text-fontColor2"
-          >
-            <p>Css</p>
-            <p>85%</p>
+        <!-- Extra Skills -->
+        <div
+          id="extraSkills"
+          class="flex flex-col gap-[5px] pb-[25px] border-b border-1.5px border-borderColor border-solid"
+        >
+          <h4 class="font-inter font-[500] text-[18px] text-fontColor1 mb-[10px]">
+            Extra Skills
+          </h4>
+          <div class="flex gap-[15px]">
+            <img  class="h-[15px] w-[15px]" src="/images/Icons1.png" />
+            <p class="font-inter font-[400] text-[15px] text-fontColor2">
+              Bootstrap, Materialize
+            </p>
           </div>
-          <div
-            class="w-full h-[6px] border border-solid border-[0.5px] border-yellowColor rounded-[5px]"
-          >
-            <div class="w-[84%] h-[2px] m-[1px]  bg-yellowColor dark:bg-darkYColor"></div>
+          <div class="flex gap-[15px]">
+            <img  class="h-[15px] w-[15px]" src="/images/Icons1.png" />
+            <p class="font-inter font-[400] text-[15px] text-fontColor2">
+              Stylus, Saas, Less
+            </p>
           </div>
-        </div>
-        <div class="flex flex-col">
-          <div
-            class="flex justify-between font-inter font-[400] text-[15px] text-fontColor2"
-          >
-            <p>Js</p>
-            <p>80%</p>
+          <div class="flex gap-[15px]">
+            <img  class="h-[15px] w-[15px]" src="/images/Icons1.png" />
+            <p class="font-inter font-[400] text-[15px] text-fontColor2">
+              Gulp, Webpack, Grunt
+            </p>
           </div>
-          <div
-            class="w-full h-[6px] border border-solid border-[0.5px] border-yellowColor rounded-[5px]"
-          >
-            <div class="w-[79%] h-[2px] m-[1px]  bg-yellowColor dark:bg-darkYColor"></div>
-          </div>
-        </div>
-        <div class="flex flex-col">
-          <div
-            class="flex justify-between font-inter font-[400] text-[15px] text-fontColor2"
-          >
-            <p>PHP</p>
-            <p>75%</p>
-          </div>
-          <div
-            class="w-full h-[6px] border border-solid border-[0.5px] border-yellowColor rounded-[5px]"
-          >
-            <div class="w-[74%] h-[2px] m-[1px]  bg-yellowColor dark:bg-darkYColor"></div>
+          <div class="flex gap-[15px]">
+            <img class="h-[15px] w-[15px]" src="/images/Icons1.png" />
+            <p class="font-inter font-[400] text-[15px] text-fontColor2">
+              GIT Knowledge
+            </p>
           </div>
         </div>
-        <div class="flex flex-col">
-          <div
-            class="flex justify-between font-inter font-[400] text-[15px] text-fontColor2"
-          >
-            <p>WordPress</p>
-            <p>85%</p>
-          </div>
-          <div
-            class="w-full h-[6px] border border-solid border-[0.5px] border-yellowColor rounded-[5px]"
-          >
-            <div class="w-[84%] h-[2px] m-[1px]  bg-yellowColor dark:bg-darkYColor"></div>
-          </div>
-        </div>
-      </div>
-      <!-- Extra Skills -->
-      <div
-        id="extraSkills"
-        class="flex flex-col gap-[5px] pb-[25px] border-b border-1.5px border-borderColor border-solid"
-      >
-        <h4 class="font-inter font-[500] text-[18px] text-fontColor1 mb-[10px]">
-          Extra Skills
-        </h4>
-        <div class="flex gap-[15px]">
-          <img  class="h-[15px] w-[15px]" src="/images/Icons1.png" />
-          <p class="font-inter font-[400] text-[15px] text-fontColor2">
-            Bootstrap, Materialize
+        <!-- Button -->
+        <button
+          id="button/cv2"
+          class="flex justify-center items-center gap-[8px]  w-[98%] h-[40px] my-[4px]   bg-yellowColor dark:bg-darkYColor  hover:animate-bounce hover:transition-transform hover:justify-around hover:bg-gradient-to-r from-yellowColor to-mainColor"
+        >
+          <p class=" font-inter font-[600] text-[14px] text-fontColor1 ">
+            DOWNLOAD CV
           </p>
-        </div>
-        <div class="flex gap-[15px]">
-          <img  class="h-[15px] w-[15px]" src="/images/Icons1.png" />
-          <p class="font-inter font-[400] text-[15px] text-fontColor2">
-            Stylus, Saas, Less
-          </p>
-        </div>
-        <div class="flex gap-[15px]">
-          <img  class="h-[15px] w-[15px]" src="/images/Icons1.png" />
-          <p class="font-inter font-[400] text-[15px] text-fontColor2">
-            Gulp, Webpack, Grunt
-          </p>
-        </div>
-        <div class="flex gap-[15px]">
-          <img class="h-[15px] w-[15px]" src="/images/Icons1.png" />
-          <p class="font-inter font-[400] text-[15px] text-fontColor2">
-            GIT Knowledge
-          </p>
-        </div>
-      </div>
-      <!-- Button -->
-      <button
-        id="button/cv2"
-        class="flex justify-center items-center gap-[8px]  w-[98%] h-[40px] my-[4px]   bg-yellowColor dark:bg-darkYColor  hover:animate-bounce hover:transition-transform hover:justify-around hover:bg-gradient-to-r from-yellowColor to-mainColor"
-      >
-        <p class=" font-inter font-[600] text-[14px] text-fontColor1 ">
-          DOWNLOAD CV
-        </p>
-        <img  src="/images/Vector1.png" />
-      </button>
-    </div>
+          <img  src="/images/Vector1.png" />
+        </button>
+     </div>
     </section>
     
     <!-- Left Menu Code End -->
@@ -1469,11 +1491,10 @@
     <script> 
        const leftMenu=document.getElementById("leftMenu");
        const menuCloseImg=document.getElementById("menuCloseImg");
-       
+      
        
       function resetting()
       {
-        
         var screenWidth=window.innerWidth;
         if(screenWidth>767 && (leftMenu.classList.contains('hideSideBar') || !leftMenu.classList.contains('defaultSideBar')))
        {  
@@ -1504,6 +1525,28 @@
             menuCloseImg.src="/images/menu.png";
           }
          }
+          
+         function makeLeftBarSticky()
+         {
+          const leftMenuHeight=leftMenu.getBoundingClientRect().height;
+          const scrollHeight=window.pageYOffset;
+          const windowInnerHeight=window.innerHeight;
+          var screenWidth=window.innerWidth;
+            if((scrollHeight + windowInnerHeight)>(leftMenuHeight) && screenWidth > 767)
+          {
+             leftMenu.classList.add('sticky');
+             leftMenu.style.top = `-${leftMenuHeight-windowInnerHeight}px`;
+             console.log(screenWidth);
+          }
+          else
+          {
+            leftMenu.classList.remove('sticky');
+            leftMenu.style.top = 0;
+          } 
+         
+         
+          console.log(leftMenu.classList);
+         }
          
          function toggleTheme()
          {
@@ -1519,7 +1562,11 @@
 
          });
          window.addEventListener('resize',resetting);
+<<<<<<< HEAD
        
+=======
+         window.addEventListener('scroll', makeLeftBarSticky);
+>>>>>>> portfolio-page
          
          
     </script>
