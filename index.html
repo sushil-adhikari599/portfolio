@@ -14,10 +14,13 @@
       }
       .defaultSideBar{
         width:305px;
+        height:100%;
         @media screen and (max-width: 767px) {
-           display: none;
+         display: none;
         }
+        
       }
+      
       .showSideBar {
         position:fixed;
         width:100%;
@@ -27,7 +30,6 @@
         display:block;
         padding-bottom: 5px;
         overflow: auto;
-        
       }
       
       .hideSideBar {
@@ -308,7 +310,7 @@
     <!-- Middle Menu Code Start -->
     <section
       id="middleMenu"
-      class="flex flex-col overflow-auto w-full gap-[70px] px-[10px] py-[20px] mr-[80px] max-[767px]:mr-[60px]"
+      class="flex flex-col overflow-auto w-full gap-[70px] px-[10px] py-[20px]  mr-[80px] max-[767px]:mr-[60px] "
     >
       <!-- Main menu code -->
       <div
@@ -1508,7 +1510,7 @@
           document.documentElement.classList.toggle('dark');
           
          }
-
+        
          leftMenu.addEventListener('click', (clickToggle)=>{
           if(clickToggle.target==leftMenu && leftMenu.classList.contains('showSideBar'))
            {
@@ -1517,6 +1519,7 @@
 
          });
          window.addEventListener('resize',resetting);
+       
          
          
     </script>
